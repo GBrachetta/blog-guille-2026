@@ -173,6 +173,32 @@ const ogImage = ogImageUrl
     <hr class="my-8 border-dashed" />
 
     <AdjacentPostNav {prevPost} {nextPost} />
+
+    <div class="giscus mt-8" data-pagefind-ignore>
+      <script is:inline data-astro-rerun>
+        (() => {
+          const container = document.currentScript.parentElement;
+          const script = document.createElement("script");
+          script.src = "https://giscus.app/client.js";
+          script.crossOrigin = "anonymous";
+          script.async = true;
+          Object.assign(script.dataset, {
+            repo: "GBrachetta/blog-guille-2026",
+            repoId: "R_kgDOVtSRNA",
+            category: "Announcements",
+            categoryId: "DIC_kwDOVtSRNM4DLDw2",
+            mapping: "pathname",
+            strict: "0",
+            reactionsEnabled: "1",
+            emitMetadata: "0",
+            inputPosition: "bottom",
+            theme: "preferred_color_scheme",
+            lang: "en",
+          });
+          container.appendChild(script);
+        })();
+      </script>
+    </div>
   </main>
   <Footer />
 </PostLayout>
