@@ -1,0 +1,18 @@
+@import url("https://giscus.app/themes/dark_dimmed.css");
+
+main {
+  --color-fg-default: #eaedf3;
+  --color-fg-muted: #afb9ca;
+  --color-canvas-default: #212737;
+  --color-canvas-inset: #212737;
+  --color-canvas-subtle: #2a3248;
+  --color-canvas-overlay: #2a3248;
+  --color-border-default: #54617a;
+  --color-border-muted: #3d4862;
+  --color-accent-fg: #ff8a3d;
+  --color-accent-emphasis: #ff8a3d;
+  --color-btn-primary-text: #212737;
+  --color-btn-primary-bg: #ff8a3d;
+  --color-btn-primary-hover-bg: #ffa363;
+  --color-btn-primary-selected-bg: #ffa363;
+}

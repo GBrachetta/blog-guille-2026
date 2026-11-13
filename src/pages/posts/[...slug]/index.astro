@@ -174,31 +174,65 @@ const ogImage = ogImageUrl
 
     <AdjacentPostNav {prevPost} {nextPost} />
 
-    <div class="giscus mt-8" data-pagefind-ignore>
-      <script is:inline data-astro-rerun>
-        (() => {
-          const container = document.currentScript.parentElement;
-          const script = document.createElement("script");
-          script.src = "https://giscus.app/client.js";
-          script.crossOrigin = "anonymous";
-          script.async = true;
-          Object.assign(script.dataset, {
-            repo: "GBrachetta/blog-guille-2026",
-            repoId: "R_kgDOVtSRNA",
-            category: "Announcements",
-            categoryId: "DIC_kwDOVtSRNM4DLDw2",
-            mapping: "pathname",
-            strict: "0",
-            reactionsEnabled: "1",
-            emitMetadata: "0",
-            inputPosition: "bottom",
-            theme: "preferred_color_scheme",
-            lang: "en",
-          });
-          container.appendChild(script);
-        })();
-      </script>
-    </div>
+    <section
+      class="mt-8 border-t border-dashed pt-6"
+      aria-labelledby="comments-heading"
+      data-pagefind-ignore
+    >
+      <h2 id="comments-heading" class="mb-4 text-xl font-semibold">Comments</h2>
+      <div class="giscus">
+        <script is:inline data-astro-rerun>
+          (() => {
+            const container = document.currentScript.parentElement;
+            const root = document.documentElement;
+            const getTheme = () => {
+              const mode = root.dataset.theme === "dark" ? "dark" : "light";
+              return `https://blog.gbrachetta.com/giscus/${mode}.css`;
+            };
+            const script = document.createElement("script");
+            script.src = "https://giscus.app/client.js";
+            script.crossOrigin = "anonymous";
+            script.async = true;
+            Object.assign(script.dataset, {
+              repo: "GBrachetta/blog-guille-2026",
+              repoId: "R_kgDOVtSRNA",
+              category: "Announcements",
+              categoryId: "DIC_kwDOVtSRNM4DLDw2",
+              mapping: "pathname",
+              strict: "0",
+              reactionsEnabled: "1",
+              emitMetadata: "0",
+              inputPosition: "bottom",
+              theme: getTheme(),
+              lang: "en",
+            });
+            container.appendChild(script);
+
+            const observer = new MutationObserver(() => {
+              const theme = getTheme();
+              script.dataset.theme = theme;
+              container
+                .querySelector(".giscus-frame")
+                ?.contentWindow?.postMessage(
+                  { giscus: { setConfig: { theme } } },
+                  "https://giscus.app"
+                );
+            });
+            observer.observe(root, {
+              attributes: true,
+              attributeFilter: ["data-theme"],
+            });
+            document.addEventListener(
+              "astro:before-swap",
+              () => observer.disconnect(),
+              {
+                once: true,
+              }
+            );
+          })();
+        </script>
+      </div>
+    </section>
   </main>
   <Footer />
 </PostLayout>
