@@ -31,6 +31,7 @@ export default defineAstroPaperConfig({
   socials: [
     { name: "github", url: "https://github.com/GBrachetta" },
     { name: "x", url: "https://x.com/brachetta" },
+    { name: "mail", url: "mailto:brachetta@me.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },

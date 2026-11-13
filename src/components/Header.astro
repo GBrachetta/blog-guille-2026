@@ -11,9 +11,10 @@ import LinkButton from "./LinkButton.astro";
 import { stripBase, stripLocale } from "@/utils/withBase";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.png";
 
 const { site, features } = config;
-
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 
@@ -50,9 +51,14 @@ const isActive = (path: string) => {
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class="absolute inline-flex items-center gap-2 py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
-      {site.title}
+      <Image
+        src={logo}
+        alt=""
+        class="h-7 w-auto shrink-0 sm:h-8"
+      />
+      <span>{site.title}</span>
     </a>
     <nav
       id="nav-menu"
@@ -67,7 +73,10 @@ const isActive = (path: string) => {
         data-label-open={t.a11y.openMenu}
         data-label-close={t.a11y.closeMenu}
       >
-        <IconX id="close-icon" class="hidden" />
+        <IconX
+          id="close-icon"
+          class="hidden"
+        />
         <IconMenuDeep id="menu-icon" />
       </button>
       <ul
