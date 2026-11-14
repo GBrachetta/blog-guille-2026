@@ -4,7 +4,7 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://blog.gbrachetta.com/",
     title: "Guillermo Brachetta",
-    description: "Notes on software and early music.",
+    description: "Notes on technology and music.",
     author: "Guillermo Brachetta",
     profile: "https://gbrachetta.com/",
     ogImage: "default-og.jpg",
@@ -13,7 +13,7 @@ export default defineAstroPaperConfig({
     dir: "ltr",
   },
   posts: {
-    perPage: 4,
+    perPage: 6,
     perIndex: 4,
   },
   features: {
