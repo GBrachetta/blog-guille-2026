@@ -4,7 +4,7 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://blog.gbrachetta.com/",
     title: "Guillermo Brachetta",
-    description: "Notes on technology and music.",
+    description: "Notes on technology, devices, Home Assistant, and early music.",
     author: "Guillermo Brachetta",
     profile: "https://gbrachetta.com/",
     ogImage: "default-og.jpg",
