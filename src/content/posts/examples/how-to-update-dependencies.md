@@ -6,15 +6,12 @@ modDatetime: 2026-11-01T10:00:00.000Z
 slug: how-to-update-dependencies
 featured: false
 draft: true
-ogImage: ../../assets/images/forrest-gump-quote.png
 tags:
   - FAQ
 description: How to update project dependencies and AstroPaper template.
 ---
 
 Updating the dependencies of a project can be tedious. However, neglecting to update project dependencies is not a good idea either 😬. In this post, I will share how I usually update my projects, focusing on AstroPaper as an example. Nonetheless, these steps can be applied to other js/node projects as well.
-
-![Forrest Gump Fake Quote](@/assets/images/forrest-gump-quote.png)
 
 ## Updating Package Dependencies
 

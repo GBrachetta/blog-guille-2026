@@ -34,3 +34,5 @@ public/pagefind
 compose.override.yaml
 .markdownlint.json
 AGENTS.md
+src/content/posts/_ideas.md
+ideas.md
