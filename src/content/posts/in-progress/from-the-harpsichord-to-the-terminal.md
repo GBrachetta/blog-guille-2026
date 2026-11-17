@@ -7,7 +7,7 @@ pubDatetime: 2026-11-17T13:00:00+01:00
 slug: from-the-harpsichord-to-the-terminal
 draft: true
 tags:
-  - early-music
+  - early music
   - harpsichord
   - software
 ---

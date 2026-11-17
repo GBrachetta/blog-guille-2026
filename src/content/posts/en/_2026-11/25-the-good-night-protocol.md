@@ -7,10 +7,10 @@ pubDatetime: 2026-11-25T23:00:00+01:00
 featured: false
 draft: false
 tags:
-  - home-assistant
+  - home assistant
   - automations
   - devices
-ogImage: ../../../assets/images/2026-11/25.png
+ogImage: ../../../../assets/images/2026-11/25.png
 ---
 
 ![Image](@/assets/images/2026-11/25.png)

@@ -8,9 +8,9 @@ featured: false
 draft: false
 tags:
   - software
-  - web-development
-  - early-music
-ogImage: ../../../assets/images/2026-11/20.jpeg
+  - web development
+  - early music
+ogImage: ../../../../assets/images/2026-11/20.jpeg
 ---
 
 ![Website](@/assets/images/2026-11/20.jpeg)

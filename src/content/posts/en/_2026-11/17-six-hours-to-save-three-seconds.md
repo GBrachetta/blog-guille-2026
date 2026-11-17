@@ -7,11 +7,11 @@ pubDatetime: 2026-11-17T10:30:00+01:00
 featured: false
 draft: false
 tags:
-  - home-assistant
+  - home assistant
   - esp32
-  - smart-home
-  - automation
-ogImage: ../../../assets/images/2026-11/17.png
+  - smart home
+  - automations
+ogImage: ../../../../assets/images/2026-11/17.png
 ---
 
 ![Image](@/assets/images/2026-11/17.png)

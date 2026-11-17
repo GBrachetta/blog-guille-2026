@@ -8,6 +8,16 @@ import { resolveTimezone } from "./resolveTimezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
+export function isPostInLocale(
+  post: { id: string; filePath?: string },
+  locale: string = "en"
+): boolean {
+  const isEs =
+    post.id.startsWith("es/") ||
+    Boolean(post.filePath && post.filePath.includes("/posts/es/"));
+  return locale === "es" ? isEs : !isEs;
+}
+
 /**
  * Determines whether a post is eligible to be listed/rendered.
  *

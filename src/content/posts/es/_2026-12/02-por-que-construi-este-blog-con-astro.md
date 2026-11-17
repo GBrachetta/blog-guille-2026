@@ -1,16 +1,16 @@
 ---
 author: Guillermo Brachetta
-title: "Why I Built This Blog with Astro, Pages CMS, and Giscus"
+title: "Por qué construí este blog con Astro, Pages CMS y Giscus"
 description: "How I set up a fast, static blog that lives in Git, has a visual editor when I want one, and doesn't wake me up with database updates."
-slug: why-i-built-this-blog-with-astro
+slug: por-que-construi-este-blog-con-astro
 pubDatetime: 2026-12-02T15:00:00+01:00
 featured: false
 draft: false
 tags:
   - software
   - astro
-  - web-development
-ogImage: ../../../assets/images/2026-12/02.png
+  - desarrollo web
+ogImage: ../../../../assets/images/2026-12/02.png
 ---
 
 ![Image](@/assets/images/2026-12/02.png)

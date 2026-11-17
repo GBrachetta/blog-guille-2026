@@ -7,10 +7,10 @@ pubDatetime: 2026-11-22T12:00:00+01:00
 featured: false
 draft: false
 tags:
-  - early-music
+  - early music
   - harpsichord
   - tuning
-ogImage: ../../../assets/images/2026-11/22.png
+ogImage: ../../../../assets/images/2026-11/22.png
 ---
 
 ![Image](@/assets/images/2026-11/22.png)

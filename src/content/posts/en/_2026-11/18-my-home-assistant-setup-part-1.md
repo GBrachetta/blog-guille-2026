@@ -7,11 +7,11 @@ pubDatetime: 2026-11-18T10:00:00+01:00
 featured: false
 draft: false
 tags:
-  - home-assistant
-  - smart-home
+  - home assistant
+  - smart home
   - devices
   - hardware
-ogImage: ../../../assets/images/2026-11/18.png
+ogImage: ../../../../assets/images/2026-11/18.png
 ---
 
 ![Image](@/assets/images/2026-11/18.png)

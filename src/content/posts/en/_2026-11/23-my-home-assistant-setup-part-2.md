@@ -7,11 +7,11 @@ pubDatetime: 2026-11-23T10:00:00+01:00
 featured: false
 draft: false
 tags:
-  - home-assistant
+  - home assistant
   - automations
   - devices
   - sensors
-ogImage: ../../../assets/images/2026-11/23.png
+ogImage: ../../../../assets/images/2026-11/23.png
 ---
 
 ![Image](@/assets/images/2026-11/23.png)

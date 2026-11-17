@@ -20,6 +20,36 @@ const items = await Promise.all(
     return { url, title, Icon };
   })
 );
+
+const locale = Astro.currentLocale ?? "en";
+const targetLocale = locale === "en" ? "es" : "en";
+const label = targetLocale === "es" ? "Español" : "English";
+
+const pathname = Astro.url.pathname.replace(/\/$/, "");
+let switchUrl = targetLocale === "es" ? "/es/" : "/";
+
+if (locale === "en") {
+  if (pathname === "" || pathname === "/") {
+    switchUrl = "/es/";
+  } else if (
+    ["/posts", "/tags", "/about", "/archives", "/search"].includes(pathname)
+  ) {
+    switchUrl = `/es${pathname}/`;
+  } else {
+    switchUrl = "/es/";
+  }
+} else {
+  const stripped = pathname.replace(/^\/es/, "");
+  if (stripped === "" || stripped === "/") {
+    switchUrl = "/";
+  } else if (
+    ["/posts", "/tags", "/about", "/archives", "/search"].includes(stripped)
+  ) {
+    switchUrl = `${stripped}/`;
+  } else {
+    switchUrl = "/";
+  }
+}
 ---
 
 <div class="flex flex-wrap items-center gap-1">
@@ -33,4 +63,15 @@ const items = await Promise.all(
       ) : null
     )
   }
+  <span class="text-border mx-1 select-none" aria-hidden="true">|</span>
+  <a
+    href={switchUrl}
+    class="focus-outline border-border bg-muted/50 text-foreground hover:border-accent hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded border px-2.5 py-0.5 text-xs font-medium transition-all"
+    title={targetLocale === "es" ? "Cambiar a Español" : "Switch to English"}
+    aria-label={targetLocale === "es"
+      ? "Cambiar a Español"
+      : "Switch to English"}
+  >
+    {label}
+  </a>
 </div>

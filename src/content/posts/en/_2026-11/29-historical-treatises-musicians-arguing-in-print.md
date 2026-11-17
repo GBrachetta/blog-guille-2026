@@ -7,11 +7,11 @@ pubDatetime: 2026-11-29T10:00:00+01:00
 featured: false
 draft: false
 tags:
-  - early-music
+  - early music
   - harpsichord
   - history
   - musicology
-ogImage: ../../../assets/images/2026-11/29.png
+ogImage: ../../../../assets/images/2026-11/29.png
 ---
 
 ![Image](@/assets/images/2026-11/29.png)

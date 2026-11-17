@@ -1,16 +1,16 @@
 ---
 author: Guillermo Brachetta
-title: "Basso Continuo: When the Composer Only Writes Half the Notes"
+title: "Basso continuo: Cuando el compositor sólo escribe la mitad de las notas"
 description: "Why playing figured bass on the harpsichord feels less like reading classical music and more like an emergency negotiation in front of an audience."
-slug: basso-continuo-live-coding-in-1680
+slug: basso-continuo-live-coding-en-1680
 pubDatetime: 2026-11-30T10:00:00+01:00
 featured: false
 draft: false
 tags:
-  - early-music
-  - harpsichord
+  - música barroca
+  - clave
   - software
-ogImage: ../../../assets/images/2026-11/30.png
+ogImage: ../../../../assets/images/2026-11/30.png
 ---
 
 ![Image](@/assets/images/2026-11/30.png)

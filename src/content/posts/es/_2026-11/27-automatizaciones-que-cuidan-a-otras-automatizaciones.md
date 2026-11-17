@@ -1,17 +1,17 @@
 ---
 author: Guillermo Brachetta
-title: "Automations That Babysit Other Automations"
+title: "Automatizaciones que cuidan a otras automatizaciones"
 description: You buy one smart bulb to read in bed without getting up, and three years later you are writing watchdog scripts to monitor other scripts in your utility cupboard.
-slug: automations-that-babysit-other-automations
+slug: automatizaciones-que-cuidan-a-otras-automatizaciones
 pubDatetime: 2026-11-27T10:00:00+01:00
 featured: false
 draft: false
 tags:
-  - home-assistant
-  - automations
-  - smart-home
-  - devices
-ogImage: ../../../assets/images/2026-11/27.png
+  - home assistant
+  - automatizaciones
+  - domótica
+  - dispositivos
+ogImage: ../../../../assets/images/2026-11/27.png
 ---
 
 ![Image](@/assets/images/2026-11/27.png)

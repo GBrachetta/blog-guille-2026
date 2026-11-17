@@ -33,6 +33,8 @@ export default {
     featured: "Featured",
     recentPosts: "Recent Posts",
     allPosts: "All Posts",
+    siteDescription:
+      "Notes on technology, devices, Home Assistant, and early music.",
   },
   footer: {
     copyright: "Copyright",
