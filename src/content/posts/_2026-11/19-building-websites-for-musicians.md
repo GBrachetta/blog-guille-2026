@@ -12,6 +12,8 @@ tags:
   - early-music
 ---
 
+![Website](@/assets/images/2026-11-19.jpeg)
+
 As both a musician and a web developer, I spend a lot of time looking at classical musicians' websites. I have built my own, and I have built sites for colleagues (like the Dutch harpsichordist and clavichordist [Menno van Delft](https://www.mennovandelft.com/)).
 
 And I have to say it with affection: as a profession, we can play three-hundred-year-old counterpoint from memory, but our websites are often a small tragedy.

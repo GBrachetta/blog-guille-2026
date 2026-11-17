@@ -12,6 +12,8 @@ tags:
   - web-development
 ---
 
+![Image](@/assets/images/2026-11-21.png)
+
 Every developer who decides to start a blog has to pass through the exact same ritual first: spending three weeks over-engineering the publishing engine, adjusting syntax theme colors at two in the morning, tweaking fonts by fractions of a millimeter, and then, having successfully built the ultimate writing platform, never writing a single post.
 
 It is the perfect form of procrastination, because it feels entirely like work.

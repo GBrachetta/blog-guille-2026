@@ -12,6 +12,8 @@ tags:
   - software
 ---
 
+![Image](@/assets/images/2026-11-18.png)
+
 If you ever glance over a harpsichordist's shoulder during a concert, you might think they brought the wrong score.
 
 On the desk is a page of music, but the composer only bothered to write one single line for the left hand. Underneath the notes there are a few tiny, cryptic numbers (a `6`, a `4/2`, a `7`, a lonely sharp), and for the right hand, absolutely nothing. Pure blank paper.

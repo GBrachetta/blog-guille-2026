@@ -12,6 +12,8 @@ tags:
   - tuning
 ---
 
+![Image](@/assets/images/2026-11-20.png)
+
 If you ask someone why a harpsichordist spends twenty minutes tuning before a concert, they usually blame the weather.
 
 It is true that acoustic instruments made of wood and wire are sensitive to the humidity in the room (a harpsichord will cheerfully go out of tune if someone looks at it with bad intentions). But the real issue is not the wood. The real issue is much more embarrassing: **it is mathematically impossible to tune a keyboard in tune.**

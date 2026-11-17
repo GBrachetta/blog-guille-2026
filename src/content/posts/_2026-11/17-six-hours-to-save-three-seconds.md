@@ -13,6 +13,8 @@ tags:
   - automation
 ---
 
+![Image](@/assets/images/2026-11-17.png)
+
 Nobody starts using Home Assistant thinking they are going to spend the weekend soldering wires to put under a mattress.
 
 It always starts with a simple, reasonable idea: _"It would be nice if the bedroom lights turned on when we walk in, unless one of us is already in bed."_
