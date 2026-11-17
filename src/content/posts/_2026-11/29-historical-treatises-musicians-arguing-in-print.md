@@ -1,8 +1,9 @@
 ---
 author: Guillermo Brachetta
-pubDatetime: 2026-11-24T10:00:00+01:00
 title: "Historical Treatises: 18th-Century Musicians Arguing in Print"
+description: Modern audiences treat early music like a polite museum discipline, but 18th-century treatises reveal an ideological battlefield of wounded pride, passive aggression, and bitter stylistic wars.
 slug: historical-treatises-musicians-arguing-in-print
+pubDatetime: 2026-11-29T10:00:00+01:00
 featured: false
 draft: false
 tags:
@@ -10,10 +11,10 @@ tags:
   - harpsichord
   - history
   - musicology
-description: Modern audiences treat early music like a polite museum discipline, but 18th-century treatises reveal an ideological battlefield of wounded pride, passive aggression, and bitter stylistic wars.
+ogImage: ../../../assets/images/2026-11/29.png
 ---
 
-![Image](@/assets/images/2026-11-24.png)
+![Image](@/assets/images/2026-11/29.png)
 
 Modern audiences have an unfortunate habit of treating early music as if it were an afternoon tea party in an Austrian palace.
 

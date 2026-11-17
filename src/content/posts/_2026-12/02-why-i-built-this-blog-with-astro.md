@@ -2,17 +2,18 @@
 author: Guillermo Brachetta
 title: "Why I Built This Blog with Astro, Pages CMS, and Giscus"
 description: "How I set up a fast, static blog that lives in Git, has a visual editor when I want one, and doesn't wake me up with database updates."
-featured: false
-pubDatetime: 2026-11-21T15:00:00+01:00
 slug: why-i-built-this-blog-with-astro
+pubDatetime: 2026-12-02T15:00:00+01:00
+featured: false
 draft: false
 tags:
   - software
   - astro
   - web-development
+ogImage: ../../../assets/images/2026-12/02.png
 ---
 
-![Image](@/assets/images/2026-11-21.png)
+![Image](@/assets/images/2026-12/02.png)
 
 Every developer who decides to start a blog has to pass through the exact same ritual first: spending three weeks over-engineering the publishing engine, adjusting syntax theme colors at two in the morning, tweaking fonts by fractions of a millimeter, and then, having successfully built the ultimate writing platform, never writing a single post.
 

@@ -2,18 +2,19 @@
 author: Guillermo Brachetta
 title: "How I Taught My Bed to Blind Me at 3 a.m."
 description: "How trying to turn the bedroom lights on only when nobody is asleep led to learning how to solder, wiring four sensors under the mattress, and being blinded at 3 a.m. by my own foot."
-featured: false
-pubDatetime: 2026-11-17T10:30:00+01:00
 slug: six-hours-to-save-three-seconds
+pubDatetime: 2026-11-17T10:30:00+01:00
+featured: false
 draft: false
 tags:
   - home-assistant
   - esp32
   - smart-home
   - automation
+ogImage: ../../../assets/images/2026-11/17.png
 ---
 
-![Image](@/assets/images/2026-11-17.png)
+![Image](@/assets/images/2026-11/17.png)
 
 Nobody starts using Home Assistant thinking they are going to spend the weekend soldering wires to put under a mattress.
 

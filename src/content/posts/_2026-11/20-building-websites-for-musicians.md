@@ -2,17 +2,18 @@
 author: Guillermo Brachetta
 title: "Why Most Musician Websites Still Look Like 2004 (And How to Fix Them)"
 description: "Dramatic black-and-white portraits, unsolicited autoplay audio, and concert calendars from 2019: a loving critique from someone who lives in both worlds."
-featured: false
-pubDatetime: 2026-11-19T14:00:00+01:00
 slug: building-websites-for-musicians
+pubDatetime: 2026-11-20T14:00:00+01:00
+featured: false
 draft: false
 tags:
   - software
   - web-development
   - early-music
+ogImage: ../../../assets/images/2026-11/20.jpeg
 ---
 
-![Website](@/assets/images/2026-11-19.jpeg)
+![Website](@/assets/images/2026-11/20.jpeg)
 
 As both a musician and a web developer, I spend a lot of time looking at classical musicians' websites. I have built my own, and I have built sites for colleagues (like the Dutch harpsichordist and clavichordist [Menno van Delft](https://www.mennovandelft.com/)).
 

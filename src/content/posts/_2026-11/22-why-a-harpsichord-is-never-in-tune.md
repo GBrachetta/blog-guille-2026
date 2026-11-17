@@ -2,17 +2,18 @@
 author: Guillermo Brachetta
 title: "Why a Harpsichord Can Never Actually Be in Tune (And Why That Is Wonderful)"
 description: "The mathematical impossibility at the heart of keyboards, and why the unevenness of historical temperaments creates a palette of colors that modern pianos threw away."
-featured: false
-pubDatetime: 2026-11-20T12:00:00+01:00
 slug: why-a-harpsichord-is-never-in-tune
+pubDatetime: 2026-11-22T12:00:00+01:00
+featured: false
 draft: false
 tags:
   - early-music
   - harpsichord
   - tuning
+ogImage: ../../../assets/images/2026-11/22.png
 ---
 
-![Image](@/assets/images/2026-11-20.png)
+![Image](@/assets/images/2026-11/22.png)
 
 If you ask someone why a harpsichordist spends twenty minutes tuning before a concert, they usually blame the weather.
 

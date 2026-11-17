@@ -1,18 +1,19 @@
 ---
 author: Guillermo Brachetta
-pubDatetime: 2026-11-22T23:00:00+01:00
 title: "The Good Night Protocol: Preparing the Bunker for Sleep"
+description: At 23:00, an iPhone webhook triggers a complete shutdown. Two smart locks engage, roller shades descend, the thermostat drops to 18 °C, and Home Assistant negotiates domestic peace.
 slug: the-good-night-protocol
+pubDatetime: 2026-11-25T23:00:00+01:00
 featured: false
 draft: false
 tags:
   - home-assistant
   - automations
   - devices
-description: At 23:00, an iPhone webhook triggers a complete shutdown. Two smart locks engage, roller shades descend, the thermostat drops to 18 °C, and Home Assistant negotiates domestic peace.
+ogImage: ../../../assets/images/2026-11/25.png
 ---
 
-![Image](@/assets/images/2026-11-22.png)
+![Image](@/assets/images/2026-11/25.png)
 
 At twenty-three hundred hours, a sensible person brushes their teeth, turns off the bedside lamp, and falls asleep.
 

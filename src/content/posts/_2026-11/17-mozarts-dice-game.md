@@ -2,16 +2,16 @@
 author: Guillermo Brachetta
 title: "Mozart’s Dice Game"
 description: "How I wrote both the music and the JavaScript for my take on Mozart’s Musical Dice Game."
-featured: true
-pubDatetime: 2026-11-17T09:30:00+01:00
 slug: mozarts-dice-game
+pubDatetime: 2026-11-17T09:30:00+01:00
+featured: true
 draft: false
 tags:
   - early-music
   - harpsichord
   - software
   - javascript
-ogImage: ../../../assets/images/mozarts-dice-game.png
+ogImage: ../../../assets/images/2026-11/dice-game.png
 ---
 
 In the 18th century, there was a popular parlor trick called a _Musikalisches Würfelspiel_, or Musical Dice Game. The most famous one was published in 1792 and attributed to Mozart. The idea is simple: you have a stack of short musical fragments and a table of numbers. You roll two dice for each bar, look up the corresponding fragment in the table, and put together a piece of music without needing to know anything about composition.
@@ -20,7 +20,7 @@ A while ago, I went looking for a good version of it online. Most of the ones I 
 
 Since I spend half my life around early music and the other half writing code, I figured I could build a better one. That became [Musical Dice](https://gbrachetta.github.io/Musical-Dice/).
 
-![Musical Dice](@/assets/images/mozarts-dice-game.png)
+![Musical Dice](@/assets/images/2026-11/dice-game.png)
 
 ## Writing the music first
 

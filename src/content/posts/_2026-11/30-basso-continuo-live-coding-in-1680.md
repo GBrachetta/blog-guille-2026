@@ -2,17 +2,18 @@
 author: Guillermo Brachetta
 title: "Basso Continuo: When the Composer Only Writes Half the Notes"
 description: "Why playing figured bass on the harpsichord feels less like reading classical music and more like an emergency negotiation in front of an audience."
-featured: false
-pubDatetime: 2026-11-18T08:00:00+01:00
 slug: basso-continuo-live-coding-in-1680
+pubDatetime: 2026-11-30T10:00:00+01:00
+featured: false
 draft: false
 tags:
   - early-music
   - harpsichord
   - software
+ogImage: ../../../assets/images/2026-11/30.png
 ---
 
-![Image](@/assets/images/2026-11-18.png)
+![Image](@/assets/images/2026-11/30.png)
 
 If you ever glance over a harpsichordist's shoulder during a concert, you might think they brought the wrong score.
 

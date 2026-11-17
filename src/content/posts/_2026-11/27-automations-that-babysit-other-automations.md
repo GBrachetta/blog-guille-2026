@@ -1,8 +1,9 @@
 ---
 author: Guillermo Brachetta
-pubDatetime: 2026-11-23T10:00:00+01:00
 title: "Automations That Babysit Other Automations"
+description: You buy one smart bulb to read in bed without getting up, and three years later you are writing watchdog scripts to monitor other scripts in your utility cupboard.
 slug: automations-that-babysit-other-automations
+pubDatetime: 2026-11-27T10:00:00+01:00
 featured: false
 draft: false
 tags:
@@ -10,10 +11,10 @@ tags:
   - automations
   - smart-home
   - devices
-description: You buy one smart bulb to read in bed without getting up, and three years later you are writing watchdog scripts to monitor other scripts in your utility cupboard.
+ogImage: ../../../assets/images/2026-11/27.png
 ---
 
-![Image](@/assets/images/2026-11-23.png)
+![Image](@/assets/images/2026-11/27.png)
 
 I bought one smart bulb. That was the mistake.
 
