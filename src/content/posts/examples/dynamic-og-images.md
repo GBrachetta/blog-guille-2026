@@ -75,7 +75,7 @@ If you change `cssVariable`, also update the matching key in:
 - `src/pages/posts/[...slug]/index.png.ts`
 
 > Check out [this PR](https://github.com/satnaing/astro-paper/pull/318) for more info.
-
+>
 > [!WARNING] Caveats
 >
 > - **Build time** grows with content volume — one PNG per eligible post is generated at build time. Generation is faster in v6 (PR [#632](https://github.com/satnaing/astro-paper/pull/632)), but on very large sites you can disable it with `features.dynamicOgImage: false` in `astro-paper.config.ts`.

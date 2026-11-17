@@ -89,10 +89,10 @@ export default defineAstroPaperConfig({
 
 <ResponsiveTable>
 
-| Option                | Description                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `perPage`             | Number of posts shown per page on paginated listing pages. Defaults to `4`.                                                       |
-| `perIndex`            | Number of posts shown in the Recent section on the home page. Defaults to `4`.                                                    |
+| Option                | Description                                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
+| `perPage`             | Number of posts shown per page on paginated listing pages. Defaults to `4`.                              |
+| `perIndex`            | Number of posts shown in the Recent section on the home page. Defaults to `4`.                           |
 | `scheduledPostMargin` | **Deprecated.** Has no effect, see [Scheduled posts](#scheduled-posts). Safe to delete from your config. |
 
 </ResponsiveTable>
@@ -117,7 +117,7 @@ This is checked at build time, so a scheduled post appears with the first build 
 | `showBackButton`   | Show the "Go back" button on post pages. Defaults to `true`.                                                                                                                                                                                  |
 | `editPost`         | An "Edit page" link shown under post titles. Set `enabled: true` and provide the base `url` for your repository's edit URL. Per-post override via `hideEditPost` frontmatter.                                                                 |
 | `search`           | Search provider. `"pagefind"` is the default. Set to `false` to disable search entirely.                                                                                                                                                      |
-| `toc` | Table of contents on posts with 2 or more h2/h3 headings: beside the post on wide screens, behind the floating button on smaller ones. Defaults to `true`. Per-post override via `hideToc` frontmatter. |
+| `toc`              | Table of contents on posts with 2 or more h2/h3 headings: beside the post on wide screens, behind the floating button on smaller ones. Defaults to `true`. Per-post override via `hideToc` frontmatter.                                       |
 
 </ResponsiveTable>
 
