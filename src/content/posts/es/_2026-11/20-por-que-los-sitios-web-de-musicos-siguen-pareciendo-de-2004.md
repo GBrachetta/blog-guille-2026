@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "Por qué los sitios web de músicos siguen pareciendo de 2004 (y cómo arreglarlos)"
-description: "Dramatic black-and-white portraits, unsolicited autoplay audio, and concert calendars from 2019: a loving critique from someone who lives in both worlds."
+description: "Retratos dramáticos en blanco y negro, música que arranca sola y calendarios de conciertos de 2019: una crítica con cariño desde los dos lados del mostrador."
 slug: por-que-los-sitios-web-de-musicos-siguen-pareciendo-de-2004
 pubDatetime: 2026-11-20T14:00:00+01:00
 featured: false
@@ -15,36 +15,36 @@ ogImage: ../../../../assets/images/2026-11/20.jpeg
 
 ![Website](@/assets/images/2026-11/20.jpeg)
 
-As both a musician and a web developer, I spend a lot of time looking at classical musicians' websites. I have built my own, and I have built sites for colleagues (like the Dutch harpsichordist and clavichordist [Menno van Delft](https://www.mennovandelft.com/)).
+Como músico y programador web, paso muchísimo tiempo mirando sitios de músicos clásicos. Diseñé el mío y también desarrollé sitios para colegas (como el clavecinista y clavicordista holandés [Menno van Delft](https://www.mennovandelft.com/)).
 
-And I have to say it with affection: as a profession, we can play three-hundred-year-old counterpoint from memory, but our websites are often a small tragedy.
+Y lo tengo que decir con todo el cariño del mundo: como gremio, somos capaces de tocar contrapunto de hace trescientos años de memoria, pero nuestras páginas web suelen ser una pequeña tragedia.
 
-If you open ten random websites belonging to classical soloists or ensembles today, at least seven of them will feature some combination of the following:
+Si hoy abrís al azar diez sitios web de solistas o ensambles de música clásica, al menos siete van a tener alguna combinación de lo siguiente:
 
-1. A dramatic black-and-white photo where the artist is looking intensely into the middle distance, preferably leaning against a brick wall or holding an instrument as if they just rescued it from a shipwreck.
-2. A biography written in the third person that reads like an encyclopedia entry drafted by their mother, listing every masterclass they attended in 2011.
-3. A "Concerts" page where the most recent "Upcoming Event" took place four years ago in a church in Bavaria.
-4. Or worst of all, a hidden audio player from the Flash era that starts blasting a Vivaldi allegro at maximum volume the second you open the tab in a quiet train carriage.
+1. Un retrato dramático en blanco y negro donde el artista mira con intensidad hacia la nada, preferentemente apoyado contra una pared de ladrillo a la vista o sosteniendo el instrumento como si lo acabara de rescatar de un naufragio.
+2. Una biografía redactada en tercera persona que parece un artículo de una enciclopedia Salvat escrito por su propia madre, enumerando cada curso magistral al que asistió en 2011.
+3. Una sección de «Conciertos» donde la «Próxima presentación» más reciente ocurrió hace cuatro años en una iglesia en Baviera.
+4. O lo peor de todo: un reproductor de audio oculto de la época de Flash que te dispara un allegro de Vivaldi al cien por ciento de volumen en el segundo exacto en que abrís la pestaña en un vagón de tren en silencio.
 
-## Who is the website actually for?
+## ¿Para quién es la página en realidad?
 
-The reason so many musician websites go wrong is that they are built like digital monuments to the artist, instead of tools for the two people who actually visit them: **concert promoters** and **curious listeners**.
+La razón por la que tantas páginas de músicos descarrilan es que están armadas como monumentos digitales al ego del artista, en vez de funcionar como herramientas para las dos únicas personas que realmente las visitan: **programadores de conciertos** y **oyentes con curiosidad**.
 
-A promoter or festival director visiting your site is usually in a hurry. They want to find four things in under thirty seconds:
+Un programador o director de festival que entra a tu sitio por lo general está apurado. Quiere encontrar cuatro cosas en menos de treinta segundos:
 
-- What you sound like (and look like on stage),
-- When and where you are playing next,
-- A press kit with a high-resolution photo and a biography they can copy and paste into a program booklet without having to extract it from a locked PDF,
-- And a contact form or email address that actually works.
+- Cómo sonás (y cómo te plantás en el escenario),
+- Cuándo y dónde tocás próximamente,
+- Un dossier de prensa con una foto en alta resolución y una biografía que pueda copiar y pegar en el programa de mano sin tener que ponerse a extraer texto de un PDF protegido con contraseña,
+- Y un formulario de contacto o una dirección de correo que realmente funcione.
 
-A listener who just heard you in concert wants almost the same thing: your recordings, your upcoming dates, and a little bit of context about who you are that sounds like it was written by a human being.
+Un oyente que te acaba de escuchar en vivo busca prácticamente lo mismo: tus grabaciones, tus presentaciones futuras y un poco de contexto sobre quién sos que suene escrito por un ser humano de carne y hueso.
 
-## What actually works
+## Lo que realmente funciona
 
-When I built the website for [Menno](https://www.mennovandelft.com/) (and when I put together my own), the goal was to strip away all the usual theatre and let the work speak for itself.
+Cuando armé el sitio para [Menno](https://www.mennovandelft.com/) (y cuando armé el mío), el objetivo fue deshacerme de todo el teatro innecesario y dejar que la música hable sola.
 
-- **Fast and readable on a phone**: Half the people looking you up are doing it on their phone in the concert hall lobby during the interval. If your site takes eight seconds to load a 15 MB uncompressed portrait, they have already given up.
-- **Easy to keep updated**: The only thing worse than no concert calendar is an abandoned concert calendar. If adding a concert date requires calling a web agency and waiting two weeks, it will never get updated. Giving the musician a clean, simple CMS where they can add a date in one minute is half the battle.
-- **Typography and calm**: Classical music already has plenty of drama in the notes. The website doesn't need spinning animations, gold gradients, or cursive fonts that look like a wedding invitation. Good typography, generous spacing, and clear navigation feel much more confident.
+- **Rápido y legible en el teléfono**: La mitad de la gente que te busca lo hace desde el celular en el foyer de la sala durante el intervalo. Si tu sitio tarda ocho segundos en cargar un retrato de 15 MB sin comprimir, ya se cansaron y están mirando un video de TikTok.
+- **Fácil de mantener al día**: Lo único peor que no tener un calendario de conciertos es tener un calendario abandonado. Si para agregar una fecha tenés que llamar a una agencia web y esperar dos semanas, no lo vas a actualizar nunca en la vida. Darle al músico un panel sencillo donde pueda cargar una fecha en un minuto es la mitad de la batalla ganada.
+- **Tipografía y serenidad**: La música clásica ya tiene suficiente drama en sus notas. La página web no necesita animaciones que giren, degradés dorados ni tipografías cursivas que parecen una tarjeta de casamiento. Una tipografía sólida, espacio generoso y una navegación limpia transmiten muchísima más seguridad.
 
-We spend years obsessing over the smallest details of phrasing, touch, and sound on stage. Our corners of the web deserve at least a fraction of that same care (and definitely no autoplay audio).
+Nos pasamos años obsesionándonos con el detalle más minúsculo de fraseo, articulación y sonido arriba del escenario. Nuestro rincón en la web se merece al menos una fracción de ese mismo cuidado (y definitivamente nada de audio con reproducción automática).
