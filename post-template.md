@@ -10,7 +10,7 @@ draft: true
 # tags:
 #   - music
 #   - software
-# ogImage: /uploads/my-preview.jpg
+# ogImage: ../../assets/images/my-preview.jpg
 ---
 
 Write your post here.
