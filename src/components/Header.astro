@@ -53,11 +53,7 @@ const isActive = (path: string) => {
       href={getRelativeLocaleUrl(locale, "")}
       class="absolute inline-flex items-center gap-2 py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
-      <Image
-        src={logo}
-        alt=""
-        class="h-7 w-auto shrink-0 sm:h-8"
-      />
+      <Image src={logo} alt="" class="h-7 w-auto shrink-0 sm:h-8" />
       <span>{site.title}</span>
     </a>
     <nav
@@ -73,10 +69,7 @@ const isActive = (path: string) => {
         data-label-open={t.a11y.openMenu}
         data-label-close={t.a11y.closeMenu}
       >
-        <IconX
-          id="close-icon"
-          class="hidden"
-        />
+        <IconX id="close-icon" class="hidden" />
         <IconMenuDeep id="menu-icon" />
       </button>
       <ul

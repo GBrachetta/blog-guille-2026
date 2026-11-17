@@ -3,7 +3,7 @@ author: Guillermo Brachetta
 title: "Mozart’s Dice Game"
 description: "How I wrote both the music and the JavaScript for my take on Mozart’s Musical Dice Game."
 featured: true
-pubDatetime: 2026-11-17
+pubDatetime: 2026-11-17T09:30:00+01:00
 slug: mozarts-dice-game
 draft: false
 tags:
@@ -14,7 +14,7 @@ tags:
 ogImage: ../../assets/images/mozarts-dice-game.png
 ---
 
-In the 18th century, there was a popular parlor trick called a *Musikalisches Würfelspiel*, or Musical Dice Game. The most famous one was published in 1792 and attributed to Mozart. The idea is simple: you have a stack of short musical fragments and a table of numbers. You roll two dice for each bar, look up the corresponding fragment in the table, and put together a piece of music without needing to know anything about composition.
+In the 18th century, there was a popular parlor trick called a _Musikalisches Würfelspiel_, or Musical Dice Game. The most famous one was published in 1792 and attributed to Mozart. The idea is simple: you have a stack of short musical fragments and a table of numbers. You roll two dice for each bar, look up the corresponding fragment in the table, and put together a piece of music without needing to know anything about composition.
 
 A while ago, I went looking for a good version of it online. Most of the ones I found were either broken, didn't work on mobile, or sounded terrible because each bar was just a rigid MIDI file with an awkward gap before the next one started.
 
@@ -28,7 +28,7 @@ At first I thought about using the original 1792 score, but once I started playi
 
 In the historical game, you swap out one bar at a time. Technically that works, but musically a single bar is very short. It’s hard to get a real sense of phrasing when the music changes direction every three beats.
 
-So I changed the structure a bit. Instead of single bars, I used two-bar fragments. I wrote 12 complete pieces in triple time, each 24 bars long—basically a theme and 11 variations that all follow the exact same harmonic plan.
+So I changed the structure a bit. Instead of single bars, I used two-bar fragments. I wrote 12 complete pieces in triple time, each 24 bars long (basically a theme and 11 variations that all follow the exact same harmonic plan).
 
 Because all 12 pieces share the same harmony at every step, you can take bars 1 and 2 from the first piece, follow them with bars 3 and 4 from the seventh, then jump to the fourth piece for bars 5 and 6, and it all holds together. The end of any fragment leads naturally into the beginning of the next one.
 
