@@ -13,7 +13,8 @@ export async function GET() {
   return rss({
     title: `${config.site.title} (Español)`,
     description: t.home.siteDescription ?? config.site.description,
-    site: new URL("es", config.site.url).href,
+    site: new URL("es/", config.site.url).href,
+    customData: "<language>es</language>",
     items: sortedPosts.map(({ data, id, filePath }) => ({
       link: getPostUrl(id, filePath, "es"),
       title: data.title,
