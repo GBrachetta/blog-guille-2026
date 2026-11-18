@@ -133,6 +133,45 @@ const rssTitle = isEs ? `${site.title} (Español)` : site.title;
       })();
     </script>
 
+    <!-- Language preference check on bare root URL -->
+    <script is:inline>
+      (function () {
+        function checkAndRedirect() {
+          try {
+            var path = window.location.pathname.replace(/\/+$/, "") || "/";
+            if (path === "/") {
+              var pref = localStorage.getItem("preferred-locale");
+              if (pref === "es") {
+                window.location.replace("/es/");
+                return true;
+              }
+              if (!pref) {
+                var lang = (navigator.language || "").toLowerCase();
+                if (lang.startsWith("es")) {
+                  window.location.replace("/es/");
+                  return true;
+                }
+              }
+            } else if (path === "/es" || path.startsWith("/es/")) {
+              localStorage.setItem("preferred-locale", "es");
+            }
+          } catch (_) {}
+          return false;
+        }
+
+        checkAndRedirect();
+
+        document.addEventListener("astro:page-load", function () {
+          try {
+            var p = window.location.pathname.replace(/\/+$/, "") || "/";
+            if (p === "/es" || p.startsWith("/es/")) {
+              localStorage.setItem("preferred-locale", "es");
+            }
+          } catch (_) {}
+        });
+      })();
+    </script>
+
     <ClientRouter />
   </head>
   <body

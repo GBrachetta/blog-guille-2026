@@ -44,7 +44,10 @@ const switchUrl =
   }
   <span class="text-border mx-1 select-none" aria-hidden="true">|</span>
   <a
+    id="lang-switcher"
     href={switchUrl}
+    data-target-locale={targetLocale}
+    onclick={"localStorage.setItem('preferred-locale','" + targetLocale + "')"}
     class="focus-outline border-border bg-muted/50 text-foreground hover:border-accent hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded border px-2.5 py-0.5 text-xs font-medium transition-all"
     title={targetLocale === "es" ? "Cambiar a Español" : "Switch to English"}
     aria-label={targetLocale === "es"
@@ -54,3 +57,14 @@ const switchUrl =
     {label}
   </a>
 </div>
+
+<script is:inline>
+  document.addEventListener("click", function (e) {
+    var btn = e.target && e.target.closest("#lang-switcher");
+    if (btn && btn.dataset && btn.dataset.targetLocale) {
+      try {
+        localStorage.setItem("preferred-locale", btn.dataset.targetLocale);
+      } catch (_) {}
+    }
+  });
+</script>
