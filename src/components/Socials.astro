@@ -27,7 +27,8 @@ const targetLocale = locale === "en" ? "es" : "en";
 const label = targetLocale === "es" ? "Español" : "English";
 
 const alternateUrls = getAlternateUrls(Astro.url.pathname);
-const switchUrl = targetLocale === "es" ? alternateUrls.es : alternateUrls.en;
+const switchUrl =
+  targetLocale === "es" ? alternateUrls.esPath : alternateUrls.enPath;
 ---
 
 <div class="flex flex-wrap items-center gap-1">

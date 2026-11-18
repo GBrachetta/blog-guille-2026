@@ -53,6 +53,8 @@ export interface AlternateUrls {
   en: string;
   es: string;
   xDefault: string;
+  enPath: string;
+  esPath: string;
 }
 
 export function getAlternateUrls(
@@ -124,5 +126,7 @@ export function getAlternateUrls(
     en: `${base}${enPath}`,
     es: `${base}${esPath}`,
     xDefault: `${base}${enPath}`,
+    enPath,
+    esPath,
   };
 }
