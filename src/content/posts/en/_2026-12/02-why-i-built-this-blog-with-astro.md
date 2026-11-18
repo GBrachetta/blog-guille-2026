@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
-title: "Why I Built This Blog with Astro, Pages CMS, and Giscus"
-description: "How I set up a fast, static blog that lives in Git, has a visual editor when I want one, and doesn't wake me up with database updates."
+title: "Why I Built This Blog with Astro, Pages CMS, and Remark42"
+description: "How I set up a fast, static blog that lives in Git, has a visual editor when I want one, and self-hosts private comments without surveillance."
 slug: why-i-built-this-blog-with-astro
 pubDatetime: 2026-12-02T15:00:00+01:00
 featured: false
@@ -49,16 +49,26 @@ That is why I added [Pages CMS](https://pagescms.org/). It requires zero databas
 
 When you click save, Pages CMS connects to GitHub and commits the change for you behind the scenes. If I am at my desk coding, I edit the raw `.md` files in my editor. If I am on an iPad or away from my machine, I open the browser editor. Both workflows touch the exact same Git repository.
 
-## Comments without surveillance
+## Comments without surveillance: The detour through Giscus
 
 A static website is wonderful until you want readers to be able to leave a note.
 
-Traditional comment plugins are usually awful. Either they track your visitors across the internet with advertising cookies, or they turn into a ghost town overrun by bots trying to sell questionable remedies.
+Traditional comment systems are usually awful. Either they track your visitors across the internet with advertising cookies, or they turn into a ghost town overrun by bots trying to sell questionable remedies.
 
-To solve that without adding a backend, I connected [Giscus](https://giscus.app/). It uses **GitHub Discussions** as the comment storage. Readers who want to comment simply sign in with GitHub, and their comments appear directly at the bottom of the post, styled with custom light and dark CSS to match the rest of the site. There is no tracking, no database to manage, and spam is practically nonexistent.
+Initially, I connected [Giscus](https://giscus.app/), which uses GitHub Discussions as a backend. From a pure engineering standpoint, it looked brilliant: no database to maintain, zero server footprint, and spam is practically nonexistent.
+
+Then reality tapped me on the shoulder.
+
+My audience is not exclusively made up of terminal-dwelling software developers. Expecting a harpsichordist, an early music aficionado, or someone curious about Home Assistant to authenticate with a GitHub developer account just to leave a two-sentence comment is completely unreasonable. It creates an absurd barrier to entry.
+
+So I pivoted to [Remark42](https://remark42.com/).
+
+Remark42 is a privacy-focused, lightweight commenting engine written in Go. Instead of handing comment data to a third party or demanding a developer login, I self-host it in a small Docker container on my Synology NAS at home. It lives behind an encrypted subdomain, uses an embedded database, and respects readers.
+
+Anyone can leave a comment with a simple email magic link or anonymously, without advertising cookies, tracking pixels, or algorithmic surveillance. Even better, it allowed me to build a shared bilingual thread mapping: whether someone reads a post in English or Spanish, they participate in the exact same conversation.
 
 ## The real danger
 
-The real problem with setting up a stack this clean (Astro for static speed, Pages CMS for editing, Giscus for comments, and automated daily builds) is that you completely run out of technical excuses.
+The real problem with setting up a stack this clean (Astro for static speed, Pages CMS for editing, Remark42 for private comments, and automated daily builds) is that you completely run out of technical excuses.
 
 There are no more servers to tune, no plugins to update, and no configuration files left to fiddle with. At some point, you have to face the terrifying blank cursor on the screen and actually write something.

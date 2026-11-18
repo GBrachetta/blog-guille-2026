@@ -78,6 +78,21 @@ const t = useTranslations(locale);
         bundlePath,
         showImages: false,
         showSubResults: true,
+        translations: {
+          placeholder: "Buscar artículos...",
+          clear_search: "Borrar",
+          load_more: "Cargar más resultados",
+          search_label: "Buscar en este sitio",
+          filters_label: "Filtros",
+          zero_results: "No se encontraron resultados para [SEARCH_TERM]",
+          many_results: "[COUNT] resultados encontrados para [SEARCH_TERM]",
+          one_result: "[COUNT] resultado encontrado para [SEARCH_TERM]",
+          alt_search:
+            "No se encontraron resultados para [SEARCH_TERM]. Mostrando resultados para [DIFFERENT_TERM] en su lugar",
+          search_suggestion:
+            "No se encontraron resultados para [SEARCH_TERM]. Pruebe con una de las siguientes búsquedas:",
+          searching: "Buscando [SEARCH_TERM]...",
+        },
         processTerm: function (term: string) {
           params.set("q", term); // Update the `q` parameter in the URL
           history.replaceState(history.state, "", "?" + params.toString()); // Push the new URL without reloading
@@ -89,6 +104,8 @@ const t = useTranslations(locale);
           return term;
         },
       });
+
+      search.triggerFilters({ language: "es" });
 
       // If search param exists (eg: search?q=astro), trigger search
       const query = params.get("q");
@@ -160,6 +177,10 @@ const t = useTranslations(locale);
       text-decoration-line: none;
       outline-width: 2px;
       outline-style: dashed;
+    }
+
+    .pagefind-ui__filter-panel {
+      display: none;
     }
 
     .pagefind-ui__result:last-of-type {

@@ -5,7 +5,7 @@ description: "Guillermo Brachetta, web developer and harpsichordist."
 
 Hello, I’m Guillermo Brachetta. I build for the web, play the harpsichord, and conduct.
 
-![Portrait of Guillermo Brachetta](https://www.gbrachetta.com/static/me-8a687d12074125ace059a3aeae3be4d3.png)
+![Portrait of Guillermo Brachetta](@/assets/me.png)
 
 I like making things and figuring out why they work. On the web, that’s taken me from React and Next.js to Django and the databases behind it. Sometimes the two worlds meet. For Mozart’s Dice Game, I wrote both the JavaScript that puts the music together and the music it plays.
 

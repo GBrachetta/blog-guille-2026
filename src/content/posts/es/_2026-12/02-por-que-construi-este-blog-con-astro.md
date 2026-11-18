@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
-title: "Por qué construí este blog con Astro, Pages CMS y Giscus"
-description: Cómo armé un blog estático y veloz que vive en Git, tiene un editor visual cuando lo necesito y no me despierta de noche con actualizaciones de bases de datos.
+title: "Por qué construí este blog con Astro, Pages CMS y Remark42"
+description: Cómo armé un blog estático y veloz que vive en Git, tiene un editor visual cuando lo necesito y aloja comentarios privados sin rastreo.
 slug: por-que-construi-este-blog-con-astro
 pubDatetime: 2026-12-02T15:00:00+01:00
 featured: false
@@ -49,16 +49,26 @@ Por eso sumé [Pages CMS](https://pagescms.org/). No requiere ninguna configurac
 
 Cuando hacés clic en guardar, Pages CMS se conecta a GitHub y comitea el cambio por vos tras bambalinas. Si estoy en el escritorio programando, edito los archivos `.md` crudos en mi editor. Si estoy con el iPad o lejos de la máquina, abro el editor del navegador. Ambos flujos tocan exactamente el mismo repositorio de Git.
 
-## Comentarios sin vigilancia
+## Comentarios sin vigilancia: El desvío por Giscus
 
 Un sitio estático es una maravilla hasta que querés que los lectores puedan dejarte un comentario.
 
-Los plugins tradicionales de comentarios suelen ser un espanto. O rastrean a tus visitantes por todo internet con cookies publicitarias, o se convierten en un pueblo fantasma tapado de bots tratando de vender remedios dudosos.
+Los sistemas tradicionales de comentarios suelen ser un espanto. O rastrean a tus visitantes por todo internet con cookies publicitarias, o se convierten en un pueblo fantasma tapado de bots tratando de vender remedios dudosos.
 
-Para resolver eso sin sumar un backend, conecté [Giscus](https://giscus.app/). Utiliza las **Discusiones de GitHub** como almacenamiento de comentarios. Los lectores que quieren comentar simplemente inician sesión con GitHub, y sus comentarios aparecen directamente al pie del post, estilizados con CSS personalizado claro y oscuro para integrarse al resto del sitio. No hay rastreo, no hay bases de datos que administrar y el spam es prácticamente inexistente.
+Al principio conecté [Giscus](https://giscus.app/), que utiliza las Discusiones de GitHub por detrás. Desde una perspectiva puramente técnica parecía brillante: sin bases de datos para mantener, cero huella en el servidor y casi nada de spam.
+
+Hasta que la realidad me tocó el hombro.
+
+Mi audiencia no está compuesta únicamente por desarrolladores que viven adentro de una terminal. Pretender que un clavecinista, un aficionado a la música barroca o alguien curioso por Home Assistant se cree una cuenta de desarrollador en GitHub solo para dejar un comentario de dos líneas es un disparate total. Genera una barrera de entrada absurda.
+
+Así que pegué el volantazo hacia [Remark42](https://remark42.com/).
+
+Remark42 es un motor de comentarios liviano y enfocado en la privacidad, escrito en Go. En vez de regalarle los datos de los comentarios a un tercero o exigir un inicio de sesión de desarrollador, lo autoalojo en un contenedor Docker liviano en mi NAS Synology en casa. Vive detrás de un subdominio cifrado, usa una base de datos embebida y respeta a los lectores.
+
+Cualquiera puede comentar con un simple enlace mágico al correo o de forma anónima, sin cookies de publicidad, píxeles de rastreo ni vigilancia algorítmica. Y encima me permitió armar un mapeo bilingüe: lean el artículo en inglés o en español, todos participan exactamente de la misma conversación.
 
 ## El verdadero peligro
 
-El verdadero problema de armar un stack tan limpio (Astro para velocidad estática, Pages CMS para editar, Giscus para comentarios y compilaciones automáticas diarias) es que te quedás sin excusas técnicas.
+El verdadero problema de armar un stack tan limpio (Astro para velocidad estática, Pages CMS para editar, Remark42 para comentarios privados y compilaciones automáticas diarias) es que te quedás sin excusas técnicas.
 
 Ya no hay servidores para afinar, ni plugins para actualizar, ni archivos de configuración con los que perder el tiempo. En algún momento, tenés que plantarte frente al cursor titilando en la pantalla en blanco y, efectivamente, escribir algo.
