@@ -1,0 +1,185 @@
+---
+import config from "@/config";
+
+type Props = {
+  title?: string;
+};
+
+const { title } = Astro.props;
+const locale = Astro.currentLocale ?? config.site.lang;
+const commentsTitle = locale === "es" ? "Comentarios" : "Comments";
+
+// Bidirectional slug mapping to share a single comment thread across English and Spanish
+const postSlugsEsToEn: Record<string, string> = {
+  "el-juego-de-dados-de-mozart": "mozarts-dice-game",
+  "como-le-ensene-a-mi-cama-a-cegarme-a-las-3-am":
+    "six-hours-to-save-three-seconds",
+  "mi-setup-de-home-assistant-parte-1": "my-home-assistant-setup-part-1",
+  "por-que-los-sitios-web-de-musicos-siguen-pareciendo-de-2004":
+    "building-websites-for-musicians",
+  "por-que-un-clave-nunca-puede-estar-afinado":
+    "why-a-harpsichord-is-never-in-tune",
+  "mi-setup-de-home-assistant-parte-2": "my-home-assistant-setup-part-2",
+  "el-protocolo-de-buenas-noches": "the-good-night-protocol",
+  "automatizaciones-que-cuidan-a-otras-automatizaciones":
+    "automations-that-babysit-other-automations",
+  "tratados-historicos-musicos-discutiendo-por-escrito":
+    "historical-treatises-musicians-arguing-in-print",
+  "basso-continuo-live-coding-en-1680": "basso-continuo-live-coding-en-1680",
+  "por-que-construi-este-blog-con-astro": "why-i-built-this-blog-with-astro",
+};
+
+// Calculate canonical English path for comments so both locales share the same thread
+const currentPath = Astro.url.pathname;
+const cleanSlug = currentPath
+  .replace(/^\/es\/posts\//, "")
+  .replace(/^\/posts\//, "")
+  .replace(/\/$/, "");
+
+const canonicalSlug = postSlugsEsToEn[cleanSlug] ?? cleanSlug;
+const canonicalPath = `/posts/${canonicalSlug}/`;
+const siteUrl = config.site.url.replace(/\/$/, "");
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+---
+
+<section
+  class="mt-8 mb-12 border-t border-dashed pt-6"
+  aria-labelledby="comments-heading"
+  data-pagefind-ignore
+>
+  <div class="mb-4 flex items-center gap-2">
+    <h2 id="comments-heading" class="text-foreground text-xl font-semibold">
+      {commentsTitle}
+    </h2>
+    <span
+      class="remark42__counter bg-muted text-muted-foreground hidden rounded-full px-2 py-0.5 font-mono text-xs font-medium"
+    ></span>
+  </div>
+  <div id="remark42"></div>
+</section>
+
+<script
+  is:inline
+  data-astro-rerun
+  define:vars={{
+    pageTitle: title,
+    pageLocale: locale,
+    sharedUrl: canonicalUrl,
+  }}
+>
+  (() => {
+    const HOST = "https://comments.gbrachetta.com";
+    const SITE_ID = "brachetta";
+
+    let instance = null;
+
+    function getTheme() {
+      return document.documentElement.dataset.theme === "dark"
+        ? "dark"
+        : "light";
+    }
+
+    function updateCount(targetUrl) {
+      const counterEl = document.querySelector(".remark42__counter");
+      if (!counterEl) return;
+      fetch(`${HOST}/api/v1/counts?site=${SITE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify([targetUrl]),
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (Array.isArray(data) && data[0]) {
+            counterEl.textContent = data[0].count.toString();
+            counterEl.classList.remove("hidden");
+            counterEl.classList.add("inline-flex");
+          }
+        })
+        .catch(() => {});
+    }
+
+    function init() {
+      const node = document.getElementById("remark42");
+      if (!node) return;
+
+      // Shared canonical URL between English and Spanish translations
+      const url = sharedUrl;
+      updateCount(url);
+
+      window.remark_config = {
+        host: HOST,
+        site_id: SITE_ID,
+        components: ["embed"],
+        url: url,
+        page_title: pageTitle || document.title,
+        theme: getTheme(),
+        locale: pageLocale || "en",
+        no_footer: true,
+        custom_properties: {
+          "--font-family": "'Google Sans Code', monospace",
+        },
+      };
+
+      if (window.REMARK42) {
+        if (instance) {
+          try {
+            instance.destroy();
+          } catch (_) {}
+          instance = null;
+        }
+        instance = window.REMARK42.createInstance({
+          node: node,
+          ...window.remark_config,
+        });
+      } else {
+        if (!document.getElementById("remark42-script")) {
+          const script = document.createElement("script");
+          script.id = "remark42-script";
+          script.type = "module";
+          script.src = `${HOST}/web/embed.mjs`;
+          script.defer = true;
+          document.head.appendChild(script);
+
+          window.addEventListener(
+            "REMARK42::ready",
+            () => {
+              const el = document.getElementById("remark42");
+              if (el && window.REMARK42) {
+                instance = window.REMARK42.createInstance({
+                  node: el,
+                  ...window.remark_config,
+                });
+              }
+            },
+            { once: true }
+          );
+        }
+      }
+    }
+
+    init();
+
+    const observer = new MutationObserver(() => {
+      const theme = getTheme();
+      window.REMARK42?.changeTheme(theme);
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        observer.disconnect();
+        if (instance) {
+          try {
+            instance.destroy();
+          } catch (_) {}
+          instance = null;
+        }
+      },
+      { once: true }
+    );
+  })();
+</script>
