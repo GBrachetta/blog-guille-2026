@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "Automatizaciones que cuidan a otras automatizaciones"
-description: You buy one smart bulb to read in bed without getting up, and three years later you are writing watchdog scripts to monitor other scripts in your utility cupboard.
+description: Comprás una lamparita inteligente para leer en la cama sin levantarte y, tres años después, estás escribiendo scripts centinela para vigilar a otros scripts en el placard de servicios.
 slug: automatizaciones-que-cuidan-a-otras-automatizaciones
 pubDatetime: 2026-11-27T10:00:00+01:00
 featured: false
@@ -16,66 +16,66 @@ ogImage: ../../../../assets/images/2026-11/27.png
 
 ![Image](@/assets/images/2026-11/27.png)
 
-I bought one smart bulb. That was the mistake.
+Compré una lamparita inteligente. Ese fue el error.
 
-The bulb worked, which was worse, because it gave me ideas. I told my partner that automating the lights would save time. That sentence alone should qualify as criminal negligence.
+La lamparita funcionó, lo cual fue todavía peor, porque me dio ideas. Le dije a mi novia que automatizar las luces nos iba a ahorrar tiempo. Esa sola frase debería calificar como negligencia criminal.
 
-Nobody who installs Home Assistant saves time. What you actually do is take a home that functioned perfectly well with copper wires and mechanical switches, and turn it into a delicate IT department where you are the only employee, working unpaid night shifts.
+Nadie que instale Home Assistant ahorra tiempo. Lo que hacés en realidad es agarrar una casa que funcionaba a la perfección con cables de cobre y teclas mecánicas, y convertirla en un frágil departamento de sistemas donde sos el único empleado, trabajando en turnos nocturnos no remunerados.
 
-Because once you have eighty devices talking to a server in the utility cupboard, you discover the fundamental rule of modern home automation: the things you automate do not stay automated. They need supervision. Constant, anxious supervision.
+Porque una vez que tenés ochenta dispositivos dialogando con un servidor en el placard de servicios, descubrís la regla fundamental de la domótica moderna: las cosas que automatizás no se quedan automatizadas. Necesitan supervisión. Una supervisión constante y ansiosa.
 
-## The second job
+## El segundo trabajo
 
-In the old days, a light switch was a piece of metal touching another piece of metal. It had an expected lifespan of forty years. It did not have firmware, it did not connect to a local radio mesh, and it never once asked you to check a log file because an API token expired.
+En los viejos tiempos, una tecla de luz era un pedazo de metal tocando a otro pedazo de metal. Tenía una vida útil estimada de cuarenta años. No tenía firmware, no se conectaba a una red local y jamás en la vida te pedía revisar un archivo de log porque se le venció un token de API.
 
-Now, turning on a lamp in my living room involves an entire chain of diplomatic negotiations.
+Hoy por hoy, prender una lámpara en mi living implica toda una cadena de negociaciones diplomáticas.
 
-The wireless button speaks Zigbee to an antenna plugged into a mini PC. The mini PC passes the payload through a container running Zigbee2MQTT, which forwards an MQTT topic to Home Assistant, which evaluates three conditions, checks if the sun is below the horizon, and finally sends a command back down the wire to a relay behind the plaster.
+El botón inalámbrico le habla por Zigbee a una antena enchufada a una mini PC. La mini PC pasa la carga útil a través de un contenedor con Zigbee2MQTT, que reenvía un topic MQTT a Home Assistant, que evalúa tres condiciones, verifica si el sol está por debajo del horizonte y, finalmente, manda una orden de regreso por el cable hacia un relé oculto detrás del revoque.
 
-When this chain works, you feel like a genius. When it fails, you are standing in the dark in your socks, staring at a blank wall, wondering if Zigbee channel 25 is currently suffering from microwave interference.
+Cuando esta cadena funciona, te sentís un genio. Cuando falla, te quedás parado en el medio de la oscuridad en medias, mirando una pared vacía y preguntándote si el canal 25 de Zigbee estará sufriendo interferencias por culpa del microondas.
 
-And that is where the descent begins. You refuse to accept that your clever system can stumble. Instead of simplifying the setup, you do what any stubborn programmer does: you write more software to police the existing software.
+Y ahí es donde empieza la pendiente. Te negás a aceptar que tu brillante sistema pueda trastabillar. En lugar de simplificar la instalación, hacés lo que hace cualquier programador obstinado: escribís más software para vigilar al software existente.
 
-## Watchdogs in the utility cupboard
+## Centinelas en el placard de servicios
 
-At some point over the last year, my automations crossed a threshold. They stopped controlling the house and started babysitting each other.
+En algún momento del último año, mis automatizaciones cruzaron un límite. Dejaron de controlar la casa y empezaron a cuidarse entre ellas como niñeras.
 
-Take the Zigbee coordinator. Every few weeks, for reasons known only to the semiconductor gods, the USB radio enters a catatonic state. It does not crash, which would be convenient; it simply stops listening. The physical switches still work because they are wired directly to relays, but the automations become deaf. You press a button, and the house simply ignores you.
+Tomemos el coordinador de Zigbee. Cada par de semanas, por motivos que solo conocen los dioses del silicio, la antena USB entra en un estado catatónico. No se cuelga del todo, lo cual sería muy conveniente; simplemente deja de escuchar. Las teclas físicas siguen funcionando porque están cableadas directo a los relés, pero las automatizaciones quedan sordas. Apretás un botón y la casa simplemente te ignora.
 
-So I built a watchdog automation. Every ten minutes, Home Assistant checks the timestamp of the last message received from the Zigbee bridge. If twelve minutes pass without a single sign of life, the watchdog does not bother asking for human intervention. It forcibly restarts the container, resets the serial port, and sends a discreet notification to my phone.
+Así que armé una automatización centinela (un watchdog). Cada diez minutos, Home Assistant revisa la marca temporal del último mensaje recibido desde el puente Zigbee. Si pasan doce minutos sin una sola señal de vida, el centinela ni se gasta en pedir intervención humana: reinicia el contenedor por la fuerza, resetea el puerto serie y me manda una notificación discreta al teléfono.
 
-I will be having dinner with friends, mid-conversation about a concert or a piece of music, and my watch will vibrate with an alert: _"Zigbee2MQTT unresponsive. Container restarted."_
+Puedo estar cenando con amigos, en medio de una charla sobre un concierto o una pieza musical, y el reloj me vibra con un aviso: _"Zigbee2MQTT unresponsive. Container restarted."_
 
-I glance at my wrist, take a sip of wine, and say nothing. The guests think I am checking an urgent email. In reality, I am silently acknowledging that my utility cupboard just performed CPR on itself.
+Miro de reojo la muñeca, tomo un sorbo de vino y no digo nada. Los invitados piensan que estoy mirando un mail urgente. En realidad, acabo de registrar en silencio que mi placard de servicios se acaba de hacer RCP a sí mismo.
 
-## The Apple border patrol
+## La patrulla fronteriza de Apple
 
-Then there is presence tracking, which is its own circular tragedy.
+Después está el rastreo de presencia, que es su propia tragedia circular.
 
-Automations need to know if we are home. If the house thinks we are away, the heating drops to 18 °C and the security system arms itself. If it thinks we are home, it leaves the radiators and lights alone.
+Las automatizaciones necesitan saber si estamos en casa. Si la casa cree que salimos, la calefacción baja a 18 °C y el sistema de seguridad se arma solo. Si cree que estamos adentro, no toca ni los radiadores ni las luces.
 
-To do this, Home Assistant listens to Apple's iCloud integration. But Apple treats any external server like a dangerous stalker. If Home Assistant polls your phone's location too frequently, Apple quietly throttles the connection.
+Para esto, Home Assistant escucha la integración de iCloud de Apple. Pero Apple trata a cualquier servidor externo como si fuera un acosador peligroso. Si Home Assistant sondea la ubicación del teléfono con demasiada frecuencia, Apple le estrangula la conexión sin avisar.
 
-When Apple throttles the connection, the coordinates freeze. Two weeks ago, my server became convinced that my partner was permanently parked in a supermarket three kilometers away, despite the fact that she was sitting on the sofa reading a book in front of me. The house was preparing to shut off her heating while she was in the room.
+Y cuando Apple estrangula la conexión, las coordenadas se congelan. Hace dos semanas, mi servidor se convenció de que mi pareja estaba estacionada indefinidamente en un supermercado a tres kilómetros de distancia, a pesar de que estaba sentada en el sillón leyendo un libro frente a mí. La casa ya se estaba preparando para apagarle la calefacción teniéndola ahí en la misma habitación.
 
-To fix this, I had to write an automation that babysits the iCloud integration. It looks at the local Wi-Fi router. If her phone is associated with the access point, it overrides the cloud tracker and forces the state to "home." Meanwhile, an hourly recovery script pings the integration to re-authenticate before Apple decides to throw another tantrum.
+Para resolverlo, tuve que escribir una automatización que cuide a la integración de iCloud. Mira el router Wi-Fi local: si el teléfono de ella está asociado al punto de acceso, anula el rastreador en la nube y fuerza el estado a "home". Mientras tanto, un script de recuperación que corre cada hora le hace ping a la integración para volver a autenticar antes de que a Apple se le ocurra hacer otro berrinche.
 
-## Who watches the watchers?
+## ¿Quién vigila a los vigilantes?
 
-The true madness of this setup is that it creates an endless recursive loop.
+La verdadera locura de todo este tinglado es que genera un bucle recursivo interminable.
 
-If you have a watchdog script that restarts the radio, what happens when the watchdog script fails? If you have an automation that sends you a notification when a backup corrupts, how do you know the notification service itself is still connected?
+Si tenés un script centinela que reinicia la antena, ¿qué pasa cuando falla el script centinela? Si tenés una automatización que te avisa cuando se corrompe un backup, ¿cómo sabés si el servicio de notificaciones sigue conectado?
 
-You catch yourself considering a second watchdog to monitor the first watchdog. You start thinking about canary pings, secondary notification channels, and redundant bridges for a house that only has two floors.
+Te descubrís a vos mismo evaluando poner un segundo centinela para vigilar al primero. Empezás a pensar en pings canario, canales secundarios de notificación y puentes redundantes para una casa que solo tiene tres pisos.
 
-My partner walked into the kitchen the other evening while I was staring intently at a terminal on my laptop, adjusting a cron job that checks if a sensor script had timed out.
+Mi pareja entró a la cocina la otra noche mientras yo miraba fijamente una terminal en mi laptop, ajustando una tarea de cron que controla si el script de un sensor había superado el tiempo de espera.
 
-She asked what I was doing.
+Me preguntó qué estaba haciendo.
 
-_"I am fixing the automation that checks whether the other automation is still working,"_ I said.
+_"Estoy arreglando la automatización que controla si la otra automatización todavía funciona"_, le dije.
 
-She paused, looked at the perfectly ordinary switch on the wall that controls the ceiling lamp, and asked, very gently, why we couldn't just use our fingers like normal people.
+Se quedó callada, miró la tecla de luz perfectamente común y corriente en la pared que maneja la lámpara del techo, y me preguntó, con infinita delicadeza, por qué no podíamos simplemente usar los dedos como la gente normal.
 
-I had no sensible answer. But ten minutes later, a silent error was caught, a container was restarted in the background, and the kitchen light turned on automatically when she walked back in.
+No tuve ninguna respuesta sensata. Pero diez minutos después, se interceptó un error silencioso, un contenedor se reinició en segundo plano y la luz de la cocina se prendió de manera automática cuando ella volvió a entrar.
 
-It is completely absurd, of course. But the bunker held, and nobody had to touch a switch.
+Es un absurdo total, claro que sí. Pero el búnker resistió y nadie tuvo que tocar una tecla.

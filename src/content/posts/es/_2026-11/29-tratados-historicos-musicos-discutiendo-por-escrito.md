@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "Tratados históricos: Músicos del siglo XVIII discutiendo por escrito"
-description: Modern audiences treat early music like a polite museum discipline, but 18th-century treatises reveal an ideological battlefield of wounded pride, passive aggression, and bitter stylistic wars.
+description: El público actual suele tratar a la música antigua como una disciplina educada de museo, pero los tratados del siglo XVIII revelan un campo de batalla de orgullo herido, pasivo-agresividad y feroces guerras de estilo.
 slug: tratados-historicos-musicos-discutiendo-por-escrito
 pubDatetime: 2026-11-29T10:00:00+01:00
 featured: false
@@ -16,78 +16,78 @@ ogImage: ../../../../assets/images/2026-11/29.png
 
 ![Image](@/assets/images/2026-11/29.png)
 
-Modern audiences have an unfortunate habit of treating early music as if it were an afternoon tea party in an Austrian palace.
+El público moderno tiene la desafortunada costumbre de tratar a la música antigua como si fuera una merienda diplomática en un palacio austríaco.
 
-We sit in quiet concert halls, listen to a Bach suite or a Rameau overture, and imagine powdered wigs bowing with exquisite courtesy, exchanging delicate compliments while scented candles flicker against gilded mirrors. We assume that seventeenth- and eighteenth-century musical life was a model of aristocratic decorum.
+Nos sentamos en salas de concierto silenciosas, escuchamos una suite de Bach o una obertura de Rameau y nos imaginamos pelucas empolvadas haciendo reverencias con cortesía exquisita, intercambiando elogios delicados mientras las velas aromáticas titilan frente a espejos dorados. Asumimos que la vida musical de los siglos XVII y XVIII era un modelo inmaculado de decoro aristocrático.
 
-Anyone who has spent twenty minutes reading the actual performance treatises left behind by these gentlemen knows that this picture is pure fantasy.
+Cualquiera que haya pasado veinte minutos leyendo los tratados de interpretación que nos dejaron estos caballeros sabe que esa imagen es una fantasía absoluta.
 
-The eighteenth-century musical world was not a polite garden. It was a pit of vipers. Behind the velvet waistcoats and Latin prefaces lay an intellectual battlefield where composers and performers savaged each other in print, traded devastating personal insults, and fought bitter stylistic civil wars over everything from fingerings to trills.
+El ambiente musical del siglo XVIII no era un jardín prolijo. Era un nido de víboras. Detrás de los chalecos de terciopelo y los prefacios en latín había un campo de batalla intelectual donde compositores e intérpretes se despedazaban por escrito, se revoleaban insultos personales demoledores y libraban encarnizadas guerras civiles estilísticas por cualquier detalle, desde las digitaciones hasta los trinos.
 
-When you open a historical treatise, you are not reading an objective textbook. You are reading a manifesto written by someone who was furious at his colleagues.
+Cuando abrís un tratado histórico, no estás leyendo un manual objetivo. Estás leyendo un manifiesto escrito por alguien que estaba furioso con sus colegas.
 
-## The art of passive-aggressive pedagogy
+## El arte de la pedagogía pasivo-agresiva
 
-Take François Couperin. In 1716, he published _L'art de toucher le clavecin_ (The Art of Playing the Harpsichord). Couperin was the royal organist to the Sun King, a man of peerless taste and supreme elegance. His tone on the page is silk, but the silk is wrapped around an iron knuckles.
+Tomemos a François Couperin. En 1716 publicó _L'art de toucher le clavecin_ (El arte de tocar el clave). Couperin era el organista real del Rey Sol, un hombre de gusto intachable y elegancia suprema. Su tono sobre el papel es de pura seda, pero la seda envuelve una manopla de hierro.
 
-Couperin was obsessed with precision. He could not stand the way foreigners (by which he largely meant Italians) played French music without understanding the unwritten conventions of French style. In France, notes written as equal eighth notes were often played with unequal lilting swing (_notes inégales_).
+Couperin estaba obsesionado con la precisión. No soportaba cómo los extranjeros (refiriéndose sobre todo a los italianos) tocaban la música francesa sin comprender sus convenciones no escritas. En Francia, las notas escritas como corcheas iguales solían tocarse con un balanceo desigual muy particular (_notes inégales_).
 
-Instead of shouting, Couperin delivered one of the most patronizing lines in music history:
+En lugar de ponerse a gritar, Couperin disparó una de las frases más soberbias de la historia de la música:
 
-> _"We write differently from what we play, which causes foreigners to play our music less well than we play theirs."_
+> _"Escribimos de manera diferente a lo que tocamos, lo que hace que los extranjeros toquen nuestra música peor de lo que nosotros tocamos la de ellos."_
 
-The French, in other words, possessed an innate nobility of spirit that permitted them to master foreign styles effortlessly, while poor, excitable foreigners simply lacked the refinement to comprehend French discretion.
+Los franceses, en otras palabras, poseían una nobleza de espíritu innata que les permitía dominar estilos extranjeros sin despeinarse, mientras que los pobres y temperamentales extranjeros simplemente carecían del refinamiento necesario para entender la discreción francesa.
 
-Couperin then spent pages explaining how children must sit at the keyboard, forbidding them from grimacing or bobbing their heads, and advising teachers to place a mirror in front of students so they could contemplate their own hideous facial tics. One gets the impression that half the keyboardists in Paris were playing with their tongues sticking out, and Couperin was on the verge of physical violence.
+Couperin pasa después páginas enteras explicando cómo los chicos deben sentarse al teclado, prohibiéndoles hacer muecas o sacudir la cabeza, y aconsejando a los maestros ponerles un espejo enfrente a los alumnos para que contemplen sus propios y espantosos tics faciales. Uno se queda con la impresión de que la mitad de los tecladistas de París tocaban con la lengua afuera y que Couperin estaba a cinco minutos de recurrir a la violencia física.
 
-## The German duelists of Potsdam
+## Los duelistas alemanes de Potsdam
 
-A generation later in Berlin, the theater moved to the court of Frederick the Great. Frederick fancied himself a premier flautist and composer, and he employed two of the greatest musical minds of Europe: Johann Joachim Quantz (his flute teacher) and Carl Philipp Emanuel Bach (his court harpsichordist).
+Una generación más tarde, en Berlín, el teatro se trasladó a la corte de Federico el Grande. A Federico le gustaba considerarse un flautista y compositor de primer orden, y tenía contratadas a dos de las mentes musicales más brillantes de Europa: Johann Joachim Quantz (su maestro de flauta) y Carl Philipp Emanuel Bach (su clavecinista de corte).
 
-Both men published monumental treatises within twelve months of each other: Quantz on flute playing in 1752, and Emanuel Bach on keyboard playing in 1753.
+Los dos publicaron tratados monumentales con apenas doce meses de diferencia: Quantz sobre cómo tocar la flauta en 1752, y Emanuel Bach sobre el arte de tocar instrumentos de teclado en 1753.
 
-Reading them side by side is a masterclass in scholarly rivalry.
+Leerlos en paralelo es una clase magistral de rivalidad académica.
 
-Quantz, writing with the authoritarian confidence of someone who had the King’s ear, spent three hundred pages setting down the law. He established rigid tempo rules based on the human pulse (eighty beats per minute, no exceptions), dictated how every single ornament must be articulated, and proclaimed that music was entering an enlightened era where French elegance was finally merging with Italian fire under German discipline.
+Quantz, escribiendo con la seguridad autoritaria de quien tiene el oído del rey, dedicó trescientas páginas a sentar jurisprudencia. Estableció reglas rígidas de tempo basadas en el pulso cardíaco humano (ochenta pulsaciones por minuto, sin excepciones), dictaminó cómo debía articularse cada adorno y proclamó que la música entraba en una era ilustrada donde la elegancia francesa por fin se fundía con el fuego italiano bajo la disciplina alemana.
 
-Emanuel Bach took a look at this orderly universe and published his own book, practically vibrating with indignation.
+Emanuel Bach miró ese universo prolijo y publicó su propio libro, prácticamente vibrando de indignación.
 
-Emanuel was the champion of the _Empfindsamer Stil_ (the sensitive, expressive style). To him, a musician who played with clockwork precision was not an artist; he was an automated puppet. In one of the most famous passages in the entire literature, Bach launched an assault on mechanical playing:
+Emanuel era el abanderado del _Empfindsamer Stil_ (el estilo sensible y expresivo). Para él, un músico que tocaba con precisión de reloj no era un artista; era una marioneta mecánica. En uno de los pasajes más célebres de toda la literatura musical, Bach arremetió contra la interpretación robótica:
 
-> _"A musician cannot move others unless he be moved himself. He must necessarily feel all of the affects that he hopes to arouse in his listeners."_
+> _"Un músico no puede conmover a otros a menos que él mismo esté conmovido. Es indispensable que sienta todos los afectos que espera despertar en sus oyentes."_
 
-Bach then turned his pen toward the singers and soloists (very likely including the royal flute players) who treated keyboard players like glorified furniture. In chapter after chapter on figured bass accompaniment, Emanuel reminded soloists that without a skilled keyboardist who understood counterpoint and voice leading, their dazzling cadenzas were nothing more than meaningless noise in an empty room.
+Después, Bach apuntó su pluma contra los cantantes y solistas (muy probablemente incluyendo a los flautistas reales) que trataban a los tecladistas como muebles caros. A lo largo de varios capítulos dedicados al acompañamiento de bajo cifrado, Emanuel les recordó a los solistas que, sin un tecladista experto que entendiera contrapunto y conducción de voces, sus deslumbrantes cadencias no eran más que ruido sin sentido en una habitación vacía.
 
-## The Italian menace and the French resistance
+## La amenaza italiana y la resistencia francesa
 
-Underneath the personal rivalries was an ideological chasm: the Italian style versus the French style.
+Por debajo de las rivalidades personales había un abismo ideológico: el estilo italiano frente al estilo francés.
 
-This was not a polite disagreement over aesthetics. It was a cultural war that consumed pamphlets, public debates, and occasionally led to street brawls in Paris (most famously during the _Querelle des Bouffons_).
+Esto no era un desacuerdo educado sobre estética. Era una guerra cultural que devoraba panfletos, debates públicos y, de vez en cuando, terminaba en peleas callejeras en París (como durante la famosa _Querelle des Bouffons_).
 
-The French viewed Italian music as noisy, superficial acrobatics. Italian violinists like Vivaldi and Locatelli were traveling Europe playing frantic runs, leaping across octaves, and treating the violin like a carnival instrument. To the French ear, this was vulgar display. True art was found in harmonic restraint, vocal clarity, and emotional subtlety.
+Para los franceses, la música italiana era un despliegue de acrobacias ruidosas y superficiales. Los violinistas italianos como Vivaldi y Locatelli recorrían Europa tocando pasajes frenéticos, saltando de octava en octava y tratando al violín como una atracción de circo. Para el oído francés, esto era pura vulgaridad. El verdadero arte residía en la moderación armónica, la claridad vocal y la sutileza emocional.
 
-The Italians, for their part, thought the French were singing funeral dirges. In 1702, the Abbé Raguenet published a tract praising Italian opera, noting that French opera sounded like a prolonged sickness punctuated by heavy sighs. This caused such a national scandal that an outraged Frenchman, Jean-Laurent Lecerf de la Viéville, wrote three entire volumes in reply, defending French music and essentially concluding that Italian music was a moral degenerator designed for people with defective nervous systems.
+Los italianos, por su parte, pensaban que los franceses cantaban cantos fúnebres. En 1702, el abate Raguenet publicó un escrito alabando la ópera italiana, señalando que la ópera francesa sonaba a una agonía prolongada puntuada por suspiros pesados. Esto provocó un escándalo nacional tan mayúsculo que un francés ofendido, Jean-Laurent Lecerf de la Viéville, escribió tres tomos enteros como respuesta, defendiendo la música francesa y concluyendo, básicamente, que la música italiana era un factor de degeneración moral diseñado para gente con el sistema nervioso descompuesto.
 
-## Swords on the operatic stage
+## Espadas en el escenario de ópera
 
-If you think this was merely academic posturing confined to leather bindings, remember Johann Mattheson.
+Por si alguien piensa que esto eran meras posturas académicas confinadas a lomos de cuero, conviene recordar a Johann Mattheson.
 
-Mattheson was the titan of Hamburg: composer, diplomat, encyclopedist, and author of _Der vollkommene Capellmeister_ (The Complete Music Director). He knew everything about music, and he knew that he knew it.
+Mattheson era el titán de Hamburgo: compositor, diplomático, enciclopedista y autor de _Der vollkommene Capellmeister_ (El perfecto maestro de capilla). Lo sabía todo sobre música, y sabía muy bien que lo sabía.
 
-In 1704, during a performance of his own opera _Cleopatra_, Mattheson (who had just finished singing the tenor role of Antony) walked into the orchestra pit and attempted to take over the harpsichord bench from the young George Frideric Handel. Handel refused to budge. A physical altercation ensued in full view of the audience.
+En 1704, durante una función de su propia ópera _Cleopatra_, Mattheson (que acababa de cantar el rol de tenor de Antonio) bajó al foso de la orquesta y quiso ocupar el banquillo del clave, desplazando al joven Georg Friedrich Händel. Händel se negó a moverse. Se armó un forcejeo físico a la vista de todo el público.
 
-After the curtain fell, the two young composers marched out into the public square outside the theater and drew literal swords. They fought a duel that ended only when Mattheson’s blade shattered against a large metal coat button on Handel’s chest.
+Al caer el telón, los dos jóvenes compositores salieron a la plaza frente al teatro y desenvainaron espadas de verdad. Se batieron a duelo, un duelo que terminó únicamente cuando la hoja de Mattheson se partió contra un botón metálico enorme en el pecho de la casaca de Händel.
 
-They made peace a few days later, but the episode illustrates the temper of the era. These were not timid scholars nibbling pastries. They were proud, fiercely opinionated practitioners who believed that an incorrect tempo or an unearned ornament was an insult to God and man.
+Hicieron las paces un par de días después, pero el episodio pinta de cuerpo entero el temperamento de la época. No eran eruditos timoratos comiendo masitas en una tertulia. Eran tipos orgullosos, vehementes y convencidos de que un tempo incorrecto o un adorno mal puesto eran un insulto directo a Dios y a los hombres.
 
-## Playing the feud
+## Tocar el conflicto
 
-When we sit at a harpsichord today, we tend to revere these yellowed eighteenth-century texts as if they were holy scripture handed down from Mount Sinai.
+Cuando hoy nos sentamos frente a un clave, solemos reverenciar estos textos amarillentos del siglo XVIII como si fueran tablas sagradas bajadas del Sinaí.
 
-We debate whether a trill should begin on the upper note or the main note as though it were a question of religious dogma.
+Discutimos si un trino tiene que arrancar desde la nota superior o desde la nota real como si fuera una cuestión de dogma religioso.
 
-In doing so, we miss the entire spirit of the literature.
+Al hacer eso, nos perdemos por completo el espíritu de esta literatura.
 
-Couperin, Quantz, C.P.E. Bach, and Mattheson were not compiling museum rules. They were defending their territory, insulting their competitors, protecting their livelihoods, and making impassioned pleas for what they believed was good taste.
+Couperin, Quantz, C.P.E. Bach y Mattheson no estaban compilando reglas de museo. Estaban defendiendo su territorio, atendiendo a sus competidores, cuidando su laburo y haciendo apasionados alegatos en favor de lo que ellos consideraban el buen gusto.
 
-The treatises are not manuals of obedience. They are dispatch notes from the front lines of an artistic revolution. The least we can do, when we put our hands on the keys, is play with the same fire that drove them to write them in the first place.
+Los tratados no son manuales de obediencia. Son partes de guerra desde la primera línea de una revolución artística. Lo mínimo que podemos hacer, cuando ponemos las manos sobre el teclado, es tocar con el mismo fuego que los empujó a escribirlos en primer lugar.

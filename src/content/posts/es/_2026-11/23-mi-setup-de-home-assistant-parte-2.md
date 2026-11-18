@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
-title: "Mi setup de Home Assistant (Parte 2): Telemetría, matrimonio y el arte de no preguntar «¿dónde estás?»"
-description: Multi-sensors in every room imaginable, smart washing machine power curves, and a HomePod that queries Waze traffic to announce Nina's arrival down to the minute.
+title: "Mi setup de Home Assistant (Parte 2): Telemetría, matrimonio y el arte de no preguntar jamás '¿Por dónde venís?'"
+description: "Multisensores en cada rincón inimaginable, curvas de consumo para el lavarropas y un HomePod que consulta el tráfico de Waze para anunciar la llegada de Nina al minuto exacto."
 slug: mi-setup-de-home-assistant-parte-2
 pubDatetime: 2026-11-23T10:00:00+01:00
 featured: false
@@ -16,58 +16,58 @@ ogImage: ../../../../assets/images/2026-11/23.png
 
 ![Image](@/assets/images/2026-11/23.png)
 
-In [Part 1](/posts/my-home-assistant-setup-part-1/), I confessed how my adult dignity dissolved into total spoiledness: running a Synology virtual machine with six gigabytes of RAM, installing flush Zigbee sockets everywhere, and refusing to touch a wall switch or yell at voice assistants.
+En la [Parte 1](/es/posts/mi-setup-de-home-assistant-parte-1/), confesé cómo mi dignidad de adulto funcional se disolvió en la comodidad más absoluta: levantar una máquina virtual en un NAS Synology con seis gigas de RAM, empotrar módulos Zigbee por todas las paredes y negarme rotundamente a tocar una tecla de luz o gritarle órdenes a un asistente de voz.
 
-Having a powerful server in the utility cupboard, however, is completely pointless if your house is fundamentally blind. You can write all the elegant automations you want, but if the system has no idea where you are, what you are doing, or how much light is coming through the windows, it is just a very expensive clock with delusions of grandeur.
+Tener un servidor potentísimo metido en el placard técnico, sin embargo, no sirve absolutamente para nada si tu casa es ciega por naturaleza. Podés pasarte el fin de semana escribiendo las automatizaciones más elegantes del mundo, pero si el sistema no tiene la menor idea de dónde estás parado, qué estás haciendo o cuánta luz natural entra por la ventana, no es más que un reloj carísimo con delirios de grandeza.
 
-Which brings us to the next stage of the obsession: turning every room into an observational laboratory.
+Lo que nos lleva directo a la siguiente fase de la obsesión: convertir cada ambiente de la casa en un laboratorio de observación meteorológica y humana.
 
-## The Flapping Arm Ritual
+## El ritual del náufrago desesperado
 
-If you look closely at the corners, doorframes, and bookshelves in our house, you will find tiny, battery-powered multi-sensors everywhere. They track temperature, humidity, and ambient illuminance in lux. On the external doors and windows, magnetic contact sensors keep quiet inventory.
+Si mirás con atención las esquinas, los marcos de las puertas y los estantes de la biblioteca de nuestra casa, vas a encontrar pequeños multisensores a batería por todos lados. Miden temperatura, humedad e iluminancia ambiental en luxes. En las puertas y ventanas exteriores, sensores magnéticos de contacto llevan un inventario silencioso de qué está abierto y qué cerrado.
 
-The real game changer, however, was throwing away conventional motion sensors.
+El verdadero salto de calidad, sin embargo, fue tirar a la basura los sensores de movimiento convencionales.
 
-Anyone who has ever lived with basic passive infrared (PIR) detectors knows the special humiliation of the freeze. You sit down on the sofa with a book or a musical score. You stay completely still for three minutes, completely absorbed in what you are doing. Suddenly, the room plunges into pitch black darkness.
+Cualquiera que haya convivido con los típicos detectores infrarrojos pasivos (los clásicos sensores PIR) conoce a la perfección esa humillación tan particular. Te sentás en el sillón con un libro o una partitura. Te quedás completamente quieto durante tres minutos, concentrado en lo que estás leyendo. De golpe, la habitación entera se hunde en la oscuridad más absoluta.
 
-At that point, you have two choices: get up from your comfortable chair, or perform an undignified, frantic arm dance in the dark like a drowning sailor trying to flag down a helicopter, just to convince a five-euro plastic sensor that your heart hasn't stopped beating.
+Llegado ese punto, tenés dos opciones: o te levantás de tu cómodo asiento para que te vuelva a ver, o empezás a sacudir los brazos en la penumbra como un náufrago desesperado haciéndole señas a un helicóptero que pasa de largo, todo para convencer a un pedazo de plástico de cinco euros de que todavía existís.
 
-I reached my limit with that nonsense. Today, the house runs on micro-radar (mmWave) presence sensors. Unlike old infrared sensors that only detect a moving heat signature, micro-radar detects the microscopic movement of your chest expanding and contracting as you breathe. You can sit perfectly still on the sofa for three hours reading, and the lights will not flicker once.
+Mi paciencia se agotó rápido con semejante disparate. Hoy la casa funciona con sensores de presencia por microrradar (tecnología mmWave). A diferencia del infrarrojo tradicional, que solo detecta el desplazamiento de una masa de calor, el microrradar detecta el movimiento milimétrico de tu pecho al inhalar y exhalar mientras respirás. Podés quedarte tres horas seguidas leyendo en el sillón sin mover un solo músculo y las luces ni siquiera van a parpadear.
 
-Even better, they work alongside ambient light thresholds. If the afternoon sun is blazing through the front windows, the house knows that turning on ceiling spotlights would be pure stupidity, no matter how many times you walk back and forth. The house does not guess. It looks, it calculates, and it stays out of the way.
+Mejor todavía, trabajan en combinación con umbrales de luz ambiental. Si el sol de la tarde está pegando de lleno por las ventanas del frente, la casa sabe que encender los focos del techo sería un gasto inútil, sin importar cuántas veces vayas y vengas por el living. El sistema no adivina. Mira, calcula y se mantiene convenientemente fuera de tu camino.
 
-## Saving the Laundry from Certain Death
+## Rescatando la ropa de una muerte segura
 
-Beyond lighting, the real triumph of home automation is solving ancient domestic catastrophes that have plagued relationships since the invention of running water.
+Más allá de la iluminación, el verdadero triunfo de automatizar una casa está en resolver catástrofes domésticas ancestrales que vienen arruinando matrimonios desde la invención del agua corriente.
 
-Take the washing machine.
+Tomemos como ejemplo el lavarropas.
 
-Every household on earth knows the tragedy. You put a load of towels or bedsheets into the drum, start the cycle, and walk away feeling virtuous. You get caught up in your day, sit down at the harpsichord, or start writing code. Four hours later, a wave of cold dread hits you: the laundry.
+Cualquier hogar del planeta conoce esta tragedia. Ponés una carga de toallas o sábanas en el tambor, arrancás el programa y te vas caminando con una agradable sensación de deber cumplido. Te ponés a hacer otras cosas, te sentás al clave o te colgás escribiendo código. A la noche, una ola de pánico helado te recorre la espalda: la ropa húmeda.
 
-You run to the utility room, open the door, and are greeted by that unmistakable, sour smell of wet fabric that has been stewing in a closed steel drum. The cycle is ruined. The day is ruined. Now you have to wash everything all over again while questioning your fitness as a functional adult.
+Salís corriendo al lavadero, abrís la escotilla y te recibe ese inconfundible olor agrio a tela empapada que estuvo fermentando en un cilindro cerrado de acero inoxidable. El lavado está arruinado. Tu día está arruinado. Ahora tenés que lavar todo de vuelta mientras te replanteás seriamente tus capacidades como adulto funcional.
 
-In our house, both the washing machine and the dryer are connected appliances integrated straight into Home Assistant. This is not about having an appliance that looks futuristic on a showroom floor; it is about total operational awareness.
+En casa, tanto el lavarropas como el secarropas son electrodomésticos conectados e integrados directamente a Home Assistant. No se trata de tener aparatos que parezcan futuristas en el salón de ventas de una tienda; se trata de control operativo total.
 
-I can programme cycles remotely, adjust settings, and monitor real-time telemetry on exactly what stage the drum is in. The machines even keep track of consumables, reporting directly to Home Assistant when the liquid detergent or soap reservoir is running low, so you never accidentally launch an hour-long cycle with half a teaspoon of soap.
+Puedo programar los ciclos a distancia, ajustar parámetros y ver la telemetría en tiempo real para saber con exactitud matemática en qué fase del lavado está el tambor. Las máquinas incluso controlan el nivel de los consumibles y le avisan a Home Assistant si el depósito de jabón líquido o suavizante está por acabarse, evitando que lances un programa de una hora con media cucharadita de detergente.
 
-And the second the cycle finishes, there is no relying on weak electronic beeps muffled behind a closed utility room door. Home Assistant registers the completion, pings our phones, and the HomePod softly announces across the house that the laundry is waiting. No forgotten wet heaps, no sour towels, and no domestic laundry amnesia.
+Y en el instante exacto en que termina el ciclo, acá no dependemos de un pitido electrónico ridículo que nadie escucha detrás de la puerta cerrada del lavadero. Home Assistant registra el fin del programa, nos manda una notificación al teléfono y el HomePod anuncia con voz suave por toda la casa que la ropa está lista para tender. Cero ropa olvidada, cero toallas agrias y cero amnesia doméstica.
 
-## The Nina Arrival Protocol
+## El protocolo de llegada de Nina
 
-The undisputed crown jewel of our entire setup, however, is how Home Assistant handles the evening commute.
+La joya indiscutida de la corona en toda nuestra instalación, sin embargo, es cómo Home Assistant gestiona el regreso a casa a la tarde.
 
-In any partnership, the daily question of _"Where are you?"_ is a constant source of low-level stress. One person is driving across traffic-choked highways in the rain, the other is at home trying to time dinner, and neither of them should be sending text messages while merging onto a Dutch ring road in the dark.
+En cualquier pareja, la pregunta diaria de _"¿Por dónde andás?"_ es una fuente inagotable de estrés innecesario. Una persona viene manejando por autopistas colapsadas bajo la lluvia, la otra está en casa calculando el tiempo de cocción de la cena, y ninguna de las dos debería estar mandando mensajes de texto mientras intenta incorporarse a una autopista holandesa en plena noche.
 
-Instead, we let the telemetry do the work.
+En vez de eso, dejamos que la telemetría haga el trabajo sucio.
 
-When Nina leaves her office, her phone crosses a geofence. Home Assistant doesn't just register that she departed; it immediately fires a script that queries the live Waze traffic API.
+Cuando Nina sale de la oficina, su teléfono cruza una geocerca. Home Assistant no se limita a registrar que se fue del trabajo; dispara de inmediato un script que consulta la API de tráfico en tiempo real de Waze.
 
-It doesn't calculate straight-line distance, which is useless in a country full of canals and sudden bridge openings. It analyzes real-time highway congestion, detects backups, and calculates her arrival down to the minute.
+No calcula una distancia en línea recta (lo cual sería un chiste en un país repleto de canales y puentes levadizos que se abren cuando se les da la gana). Analiza el congestionamiento real de las autopistas, detecta embotellamientos y estima la hora de llegada al minuto exacto.
 
-Back in our living room, the HomePod chimes softly and speaks in a calm, civilized tone:
+En nuestro living, el HomePod hace un sonido suave y anuncia con tono sereno y civilizado:
 
-_"Nina has left work. She will be home at 18:42, in thirty-four minutes."_
+_"Nina salió del trabajo. Llega a casa a las 18:42, en treinta y cuatro minutos."_
 
-I don't have to call. She doesn't have to touch her phone. I know exactly when to boil the water for pasta or slide a tray into the preheated oven. And by the time her car turns into the street, the Nuki lock is already unlocking the door, and dinner is ten minutes from the table.
+Yo no tengo que llamar a nadie. Ella no tiene que tocar el teléfono mientras maneja. Sé exactamente cuándo poner el agua para la pasta o cuándo mandar la fuente al horno precalentado. Y para cuando su auto dobla en nuestra calle, la cerradura Nuki ya destrabó la puerta y la cena está a diez minutos de servirse en la mesa.
 
-Some people look at this level of automation and see unnecessary technical indulgence. I see it as counterpoint: multiple independent voices moving at the same time, each following strict internal logic, creating perfect harmony without ever stepping on each other's toes.
+Hay gente que mira este nivel de automatización y piensa que es una extravagancia técnica desmedida. Para mí es puro contrapunto estilo Bach: varias voces independientes moviéndose al mismo tiempo, cada una siguiendo una lógica interna rigurosa, creando una armonía perfecta sin pisarse jamás los dedos.

@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "El protocolo de buenas noches: Preparando el búnker para dormir"
-description: At 23:00, an iPhone webhook triggers a complete shutdown. Two smart locks engage, roller shades descend, the thermostat drops to 18 °C, and Home Assistant negotiates domestic peace.
+description: A las 23:00, un webhook desde el iPhone dispara el apagado general. Dos cerraduras inteligentes se traban, bajan las persianas, el termostato baja a 18 °C y Home Assistant negocia la paz doméstica.
 slug: el-protocolo-de-buenas-noches
 pubDatetime: 2026-11-25T23:00:00+01:00
 featured: false
@@ -15,57 +15,57 @@ ogImage: ../../../../assets/images/2026-11/25.png
 
 ![Image](@/assets/images/2026-11/25.png)
 
-At twenty-three hundred hours, a sensible person brushes their teeth, turns off the bedside lamp, and falls asleep.
+A las veintitrés horas, una persona sensata se lava los dientes, apaga el velador y se duerme.
 
-In my house, the process resembles a submarine preparing for a deep emergency dive.
+En mi casa, el proceso se parece bastante a un submarino preparándose para una inmersión de emergencia.
 
-We live in the Netherlands, but our household is an explosive blend of Argentinian dramatic volume and Polish pragmatic stubbornness. When something minor goes wrong in our domestic life, nobody suffers in stoic silence. There is immediate theatrical despair, followed promptly by sharp, no-nonsense cross-examination.
+Vivimos en los Países Bajos, pero nuestro hogar es una mezcla explosiva de volumen dramático argentino y obstinación pragmática polaca. Cuando algo mínimo sale mal en nuestra vida doméstica, nadie sufre en silencio estoico. Hay una desesperación teatral inmediata, seguida al instante por un interrogatorio filoso y sin anestesia.
 
-Because of this cultural climate, any technology installed in the house must either work with absolute perfection or face an instant, loud tribunal.
+Por culpa de este clima cultural, cualquier tecnología instalada en la casa tiene que funcionar con una perfección absoluta, o afrontar un juicio sumario a los gritos.
 
-When I tap my phone on the nightstand, an iOS shortcut fires an encrypted webhook toward my local server. Home Assistant catches the payload, clears its throat, and initiates the shutdown sequence.
+Cuando apoyo el teléfono en el cargador de la mesa de luz, un atajo de iOS dispara un webhook encriptado directo a mi servidor local. Home Assistant recibe el paquete, se aclara la garganta y da inicio a la secuencia de apagado.
 
-What follows is an elaborate mechanical symphony that turns an ordinary Dutch family house into an impenetrable, automated bunker.
+Lo que sigue es una sinfonía mecánica meticulosa que transforma una típica casa familiar holandesa en un búnker automatizado e impenetrable.
 
-## The mechanical symphony
+## La sinfonía mecánica
 
-The soundscape of bedtime is deeply satisfying.
+El paisaje sonoro de la hora de dormir es profundamente satisfactorio.
 
-First come the locks. Two motorized smart locks on the front and back doors churn their internal gears, shooting heavy steel bolts into the door frames with the crisp, metallic clunk of a bank vault sealing for the weekend. There is no need to walk downstairs in cold socks to check if the handle turns. If the locks encounter resistance, the dashboard tells me. If they seat cleanly, the first stage of containment is complete.
+Primero entran en acción las cerraduras. Dos cerraduras motorizadas inteligentes en la puerta principal y en la del patio hacen girar sus engranajes internos, encajando pesados cerrojos de acero en los marcos con el chasquido metálico y rotundo de la bóveda de un banco cerrando por el fin de semana. No hace falta bajar en medias y con frío a revisar si el picaporte cede. Si las cerraduras encuentran resistencia, el panel me avisa. Si encajan limpias, la primera etapa de contención está lista.
 
-Almost simultaneously, the motorized roller shades begin their descent. They hum softly against the glass, rolling downward centimeter by centimeter until every pane of glass is covered in blackout fabric. Outside, the Dutch rain beats against the brickwork. Inside, the world contracts to our four walls.
+Casi al mismo tiempo, las persianas enrollables motorizadas empiezan su descenso. Zumban suavemente contra los vidrios, bajando centímetro a centímetro hasta que cada ventana queda cubierta de tela opaca. Afuera, la lluvia holandesa golpea contra los ladrillos. Adentro, el mundo se reduce a nuestras cuatro paredes.
 
-Next, climate control steps in. The heating system receives its new marching orders, cutting the radiators back to a disciplined 18 °C. If a window was accidentally left cracked open in the guest room, the system does not bother arguing with the radiator; it simply cuts off that valve entirely until morning.
+Después le toca al clima. El sistema de calefacción recibe sus nuevas órdenes de marcha y recorta los radiadores a unos disciplinados 18 °C. Si por casualidad quedó una ventana apenas entornada en el cuarto de huéspedes, el sistema ni se gasta en discutir con el radiador; simplemente corta esa válvula por completo hasta la mañana siguiente.
 
-Finally, the security system wakes up. The Aqara hub in the corridor lets out a modest chirp, arming the door sensors and peripheral motion detectors into night mode. From this moment onward, any unauthorized attempt to open an exterior door will treat the neighbourhood to ninety decibels of digital screeching.
+Por último, el sistema de seguridad se despereza. El hub Aqara en el pasillo emite un pitido discreto, armando los sensores de las puertas y los detectores periféricos de movimiento en modo nocturno. A partir de este instante, cualquier intento no autorizado de abrir una puerta exterior le va a regalar al vecindario unos noventa decibeles de chillido digital.
 
-It feels magnificent. For roughly four seconds, you feel like the commanding officer of an advanced naval vessel.
+Se siente magnífico. Durante unos cuatro segundos, te sentís el comandante al mando de un navío de guerra de última generación.
 
-Then reality knocks on the door, usually in the form of a complaint shouted from the top floor.
+Hasta que la realidad toca a la puerta, por lo general en forma de queja a los gritos desde la planta alta.
 
-## The limits of absolute power
+## Los límites del poder absoluto
 
-In software development, tearing down an environment is straightforward: you kill all processes, drop the database connections, and clear the memory.
+En desarrollo de software, desmantelar un entorno es algo lineal: matás todos los procesos, bajás las conexiones de la base de datos y limpiás la memoria.
 
-In home automation, you quickly discover that your server room is inhabited by other human beings who have legal rights and opinions.
+En domótica, te das cuenta enseguida de que tu sala de servidores está habitada por otros seres humanos que tienen derechos civiles y opiniones.
 
-In the early days of this setup, my Good Night automation was arrogant. It had a single, totalitarian service call: `light.turn_off` targeting `all`.
+En los primeros tiempos de esta instalación, mi automatización de Buenas Noches era sumamente arrogante. Tenía una única llamada de servicio, totalitaria: `light.turn_off` apuntando a `all`.
 
-The logic was pure, elegant, and completely unlivable.
+La lógica era impecable, elegante y completamente invivible.
 
-If you execute a blind blackout across the entire house at eleven at night, you do not achieve domestic tranquility. You achieve chaos.
+Si ejecutás un apagón a ciegas en toda la casa a las once de la noche, no conseguís tranquilidad doméstica. Conseguís el caos.
 
-Down the hall, someone is inevitably standing in front of the bathroom mirror with toothpaste foam on their chin, suddenly plunged into pitch darkness without warning. Upstairs in the attic, the teenagers (whose internal circadian clocks consider 23:00 to be early afternoon) find their desk lamps extinguished in the middle of writing an essay or watching a video.
+Al final del pasillo, inevitablemente hay alguien frente al espejo del baño con espuma de dentífrico en la pera, sumido de golpe en la oscuridad más absoluta y sin previo aviso. Arriba, en el ático, las adolescentes (cuyos relojes circadianos internos consideran que las 23:00 es el principio de la tarde) ven cómo sus lámparas de escritorio se apagan en medio de un ensayo escolar o de un video.
 
-A chorus of protests echoes through the stairwell in two languages. You are forced to scramble for your phone, unlock the screen with sleepy fingers, and sheepishly restore lighting to the attic while explaining that the automation was merely trying to help.
+Un coro de quejas en dos idiomas retumba por el hueco de la escalera. Y ahí te ves, corriendo a los manotazos a buscar el teléfono, desbloqueando la pantalla con dedos dormidos y restaurando las luces del ático con cara de culpa mientras tratás de explicar que la automatización solo quería colaborar.
 
-Totalitarian scripts do not survive family life. You need diplomacy.
+Los scripts totalitarios no sobreviven a la vida de familia. Hacía falta diplomacia.
 
-## Conditional logic for domestic peace
+## Lógica condicional para la paz doméstica
 
-To prevent an armed insurrection, the Good Night script had to evolve from a blunt hammer into a sensitive diplomatic treaty.
+Para evitar una rebelión armada, el script de Buenas Noches tuvo que pasar de ser un garrote ciego a convertirse en un tratado diplomático de alta sensibilidad.
 
-The automation now runs a gauntlet of conditions before it touches a single switch:
+Ahora la automatización pasa por un laberinto de condiciones antes de tocar una sola tecla de luz:
 
 ```yaml
 sequence:
@@ -85,7 +85,7 @@ sequence:
     data:
       temperature: 18
 
-  # The domestic diplomacy layer
+  # Capa de diplomacia doméstica
   - if:
       - condition: state
         entity_id: binary_sensor.bathroom_presence_fp300
@@ -98,7 +98,7 @@ sequence:
         target:
           entity_id: light.bathroom_lights
 
-  # Respect the attic only if the girls are actually home
+  # Respetar el ático solo si las chicas están en casa
   - if:
       - condition: state
         entity_id: binary_sensor.girls_at_home
@@ -113,36 +113,36 @@ sequence:
       entity_id: light.ground_floor_all
 ```
 
-### The bathroom rule
+### La regla del baño
 
-The most critical safety net in the house is the bathroom check. Cheap infrared sensors are useless here: if you stand still for fifteen seconds while washing your face, they assume the room is vacant and shut off the lights.
+La red de seguridad más crítica de toda la casa es la verificación del baño. Los sensores infrarrojos baratos acá no sirven para nada: si te quedás quieto quince segundos lavándote la cara, asumen que la habitación está vacía y te apagan la luz.
 
-To prevent sudden darkness while rinsing soap out of your eyes, I installed an Aqara FP300 presence sensor. Using millimeter-wave radar, it detects the subtle chest motion of someone simply breathing.
+Para evitar quedar a oscuras mientras te enjuagás el jabón de los ojos, instalé un sensor de presencia Aqara FP300. Al usar radar de ondas milimétricas, detecta el sutil movimiento del pecho de alguien que está, sencillamente, respirando.
 
-If the FP300 detects anyone inside, the Good Night routine politely leaves the vanity lighting alone. The person inside can finish brushing their teeth in peace, entirely unaware of the administrative shutdown sweeping the rest of the house. Once they step out into the hallway and the sensor clears, the bathroom quietly turns off its own lights thirty seconds later.
+Si el FP300 detecta a alguien adentro, la rutina de Buenas Noches respeta educadamente la luz del botiquín. La persona que esté adentro puede terminar de lavarse los dientes en paz, sin enterarse del apagado administrativo que barre el resto de la casa. Recién cuando sale al pasillo y el sensor queda despejado, el baño apaga sus propias luces treinta segundos después.
 
-Nobody gets trapped in the dark with a toothbrush. Marriages have been saved by less.
+Nadie queda atrapado a oscuras con un cepillo de dientes. Hay matrimonios que se salvaron por mucho menos.
 
-### The attic exclusion zone
+### La zona de exclusión del ático
 
-The top floor requires an even higher level of statecraft.
+El piso superior exige un nivel de diplomacia todavía mayor.
 
-The attic belongs to the girls, but granting blanket diplomatic immunity to an entire floor would be wasteful. If they are out with friends or away for the night, leaving empty rooms illuminated offends every principle of algorithmic efficiency.
+El ático es territorio de las chicas, pero concederle inmunidad diplomática irrestricta a todo un piso sería un desperdicio. Si salieron con amigos o no duermen en casa, dejar cuartos vacíos iluminados atenta contra cualquier principio de eficiencia algorítmica.
 
-So before the script touches the top floor, Home Assistant queries their presence trackers. If the system confirms that the girls are away from the house, the attic joins the general blackout without mercy.
+Así que antes de que el script toque la planta alta, Home Assistant consulta los rastreadores de presencia. Si el sistema confirma que las chicas no están en la casa, el ático se suma al apagón general sin ninguna piedad.
 
-If they are registered as home, however, their territory is granted sovereign status. If they want to stay awake reading under a desk lamp until midnight, that is their prerogative.
+En cambio, si figuran como presentes, su territorio adquiere estatus soberano. Si quieren quedarse leyendo bajo una lámpara de escritorio hasta la medianoche, es su prerrogativa.
 
-Instead of cutting their power, the system simply informs their local corridor sensors that the lower floors have gone to sleep. If one of them creeps downstairs at 01:30 in search of a late-night glass of water, the kitchen does not blaze to full daylight. It illuminates a discreet, low-intensity amber strip along the floorboards (just enough to locate the glass without waking the household).
+En lugar de cortarles la corriente, el sistema simplemente le avisa a los sensores del pasillo superior que los pisos de abajo ya se fueron a dormir. Si alguna baja en puntas de pie a la 01:30 a buscar un vaso de agua, la cocina no se enciende a pleno sol. Ilumina apenas una tira ámbar discreta y tenue a lo largo del zócalo (lo justo y necesario para encontrar el vaso sin despertar a nadie).
 
-## Sleeping inside the machine
+## Dormir adentro de la máquina
 
-By 23:05, the treaty has been honored.
+Para las 23:05, el tratado ya fue respetado.
 
-The ground floor is dark. The deadbolts are driven home. The roller shades are sealed against the Dutch drizzle, and the temperature is drifting steadily down toward 18 °C. Somewhere in the attic, a faint rectangle of light slips under a bedroom door, harmless and tolerated by the automation engine.
+La planta baja está a oscuras. Los cerrojos están clavados en sus marcos. Las persianas están selladas contra la llovizna holandesa y la temperatura desciende de manera pareja hacia los 18 °C. En algún rincón del ático, un débil rectángulo de luz se asoma por debajo de una puerta, inofensivo y tolerado por el motor de automatización.
 
-Is it ridiculous to route your bedtime routine through an enterprise-grade home automation platform, complete with millimeter-wave radar, conditional branching, presence tracking, and motorized deadbolts?
+¿Es ridículo hacer pasar tu rutina de ir a dormir por una plataforma de domótica de nivel empresarial, con radar de ondas milimétricas, bifurcaciones condicionales, rastreo de presencia y cerrojos motorizados?
 
-Probably. A traditional brass key and a pair of thumbs would accomplish roughly the same physical security in forty seconds.
+Probablemente sí. Una llave de bronce tradicional y dos dedos lograrían más o menos la misma seguridad física en cuarenta segundos.
 
-But there is a very particular, theatrical pleasure in lying down in bed, hearing the locks engage, and knowing that the bunker is buttoned up, monitoring its perimeter, and quietly waiting for morning.
+Pero hay un placer teatral muy particular en acostarse en la cama, escuchar cómo se traban las cerraduras y saber que el búnker está cerrado a cal y canto, vigilando su perímetro y esperando en silencio hasta la mañana.

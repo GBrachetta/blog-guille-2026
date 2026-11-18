@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "Por qué construí este blog con Astro, Pages CMS y Giscus"
-description: "How I set up a fast, static blog that lives in Git, has a visual editor when I want one, and doesn't wake me up with database updates."
+description: Cómo armé un blog estático y veloz que vive en Git, tiene un editor visual cuando lo necesito y no me despierta de noche con actualizaciones de bases de datos.
 slug: por-que-construi-este-blog-con-astro
 pubDatetime: 2026-12-02T15:00:00+01:00
 featured: false
@@ -15,50 +15,50 @@ ogImage: ../../../../assets/images/2026-12/02.png
 
 ![Image](@/assets/images/2026-12/02.png)
 
-Every developer who decides to start a blog has to pass through the exact same ritual first: spending three weeks over-engineering the publishing engine, adjusting syntax theme colors at two in the morning, tweaking fonts by fractions of a millimeter, and then, having successfully built the ultimate writing platform, never writing a single post.
+Cualquier programador que decide empezar un blog tiene que pasar primero por el mismo ritual exacto: pasarse tres semanas sobrediseñando el motor de publicación, ajustando los colores del tema de sintaxis a las dos de la mañana, retocando las tipografías por fracciones de milímetro y después, habiendo construido con éxito la plataforma de escritura definitiva, no escribir jamás ni un solo post.
 
-It is the perfect form of procrastination, because it feels entirely like work.
+Es la forma perfecta de procrastinación, porque se siente exactamente como trabajar.
 
-When I decided to rebuild my blog for 2026, I tried to keep the internal drama to a minimum. I already knew what I wanted, and more importantly, what I refused to live with anymore.
+Cuando decidí reconstruir mi blog para 2026, intenté mantener el drama interno al mínimo. Ya sabía lo que quería y, más importante todavía, con qué cosas me negaba a convivir.
 
-## What I didn't want
+## Lo que no quería
 
-I didn't want WordPress. I have built plenty of complex sites in my life, and the last thing I want on a Sunday morning is an email from a database server warning me that a PHP plugin I installed five years ago has opened an emergency security hole.
+No quería WordPress. Construí un montón de sitios complejos en mi vida, y lo último que quiero un domingo a la mañana es un mail de un servidor de base de datos alertándome de que un plugin de PHP que instalé hace cinco años abrió un agujero de seguridad crítico.
 
-I also didn't want to publish on platforms like Medium or Substack. I dislike reading articles through a haze of floating banners, pop-ups begging for an email address, and paywalls that ask you to sign in before you can finish a sentence. If I am writing something, I want to own the text, host it on my own domain, and not subject readers to an obstacle course.
+Tampoco quería publicar en plataformas como Medium o Substack. Detesto leer artículos a través de una neblina de banners flotantes, pop-ups rogando por una dirección de mail y muros de pago que te piden iniciar sesión antes de que puedas terminar una frase. Si voy a escribir algo, quiero ser dueño del texto, alojarlo en mi propio dominio y no someter a los lectores a una carrera de obstáculos.
 
-And finally, I didn't want a heavy JavaScript framework. Building a personal text blog with Next.js or React is like hiring a construction crane to hang a picture frame: impressive to look at, but wildly unnecessary for rendering paragraphs of text.
+Y finalmente, no quería un framework pesado de JavaScript. Armar un blog personal de texto con Next.js o React es como alquilar una grúa de construcción para colgar un portaretrato: impresionante de ver, pero absurdamente innecesario para renderizar párrafos de texto.
 
-## Plain text and Astro
+## Texto plano y Astro
 
-What I actually wanted was almost boring: plain Markdown files in a Git repository that compile into fast, static HTML.
+Lo que realmente quería era algo casi aburrido: simples archivos Markdown en un repositorio de Git que compilan a HTML estático y ultrarrápido.
 
-That brought me to [Astro](https://astro.build/). Instead of sending a massive bundle of JavaScript to your browser just so you can read a paragraph, Astro does all the work on the server during the build. What gets delivered to your screen is simple, clean HTML and CSS. The pages load instantly, search runs locally via Pagefind without sending data to third parties, and there is no database to maintain or back up.
+Eso me llevó a [Astro](https://astro.build/). En lugar de mandarle un paquete gigante de JavaScript a tu navegador solo para que puedas leer un párrafo, Astro hace todo el trabajo en el servidor durante el build. Lo que llega a tu pantalla es HTML y CSS limpio y simple. Las páginas cargan al instante, las búsquedas corren de forma local a través de Pagefind sin enviar datos a terceros, y no hay ninguna base de datos que mantener ni respaldar.
 
-I started with the [AstroPaper](https://github.com/satnaing/astro-paper) theme, adjusted the layout, brought in my typography, and added dark mode and Open Graph images.
+Empecé con el tema [AstroPaper](https://github.com/satnaing/astro-paper), ajusté el diseño, incorporé mi tipografía y sumé modo oscuro e imágenes Open Graph.
 
-The beauty of this setup is longevity. If Astro or Netlify completely disappear ten years from now, my blog is not trapped in an SQL export. It is just a folder of readable Markdown text sitting on my drive.
+La belleza de este planteo es la longevidad. Si Astro o Netlify desaparecen por completo de acá a diez años, mi blog no queda atrapado en un volcado de SQL. Es simplemente una carpeta de texto legible en Markdown guardada en mi disco.
 
-## Pages CMS for the lazy moments
+## Pages CMS para los momentos de pereza
 
-Every programmer tells themselves the same noble lie: _"I don't need a CMS, I will just open my terminal, write in Markdown, commit, and push."_
+Todo programador se repite a sí mismo la misma noble mentira: _"No necesito un CMS, voy a abrir la terminal, escribir en Markdown, commitear y pushear."_
 
-This sounds very disciplined until you are sitting on a train, look at your phone, and spot a glaring spelling mistake in a title you published three hours ago. At that moment, you don't want to pull out a laptop, open a terminal, create a branch, and run a git command. You just want a clean webpage where you can fix the letter, hit save, and go back to drinking your coffee.
+Esto suena muy disciplinado hasta que estás viajando en tren, mirás el teléfono y descubrís un error de ortografía flagrante en un título que publicaste hace tres horas. En ese instante, no querés sacar la laptop, abrir la terminal, crear una rama y tirar comandos de git. Solo querés una página web limpia donde corregir la letra, apretar guardar y seguir tomándote el café.
 
-That is why I added [Pages CMS](https://pagescms.org/). It requires zero database setup: you simply put a small `.pages.yml` file in your repository, and it gives you a clean, distraction-free visual editor directly in your browser.
+Por eso sumé [Pages CMS](https://pagescms.org/). No requiere ninguna configuración de base de datos: simplemente ponés un pequeño archivo `.pages.yml` en tu repositorio y te da un editor visual limpio y sin distracciones directo en el navegador.
 
-When you click save, Pages CMS connects to GitHub and commits the change for you behind the scenes. If I am at my desk coding, I edit the raw `.md` files in my editor. If I am on an iPad or away from my machine, I open the browser editor. Both workflows touch the exact same Git repository.
+Cuando hacés clic en guardar, Pages CMS se conecta a GitHub y comitea el cambio por vos tras bambalinas. Si estoy en el escritorio programando, edito los archivos `.md` crudos en mi editor. Si estoy con el iPad o lejos de la máquina, abro el editor del navegador. Ambos flujos tocan exactamente el mismo repositorio de Git.
 
-## Comments without surveillance
+## Comentarios sin vigilancia
 
-A static website is wonderful until you want readers to be able to leave a note.
+Un sitio estático es una maravilla hasta que querés que los lectores puedan dejarte un comentario.
 
-Traditional comment plugins are usually awful. Either they track your visitors across the internet with advertising cookies, or they turn into a ghost town overrun by bots trying to sell questionable remedies.
+Los plugins tradicionales de comentarios suelen ser un espanto. O rastrean a tus visitantes por todo internet con cookies publicitarias, o se convierten en un pueblo fantasma tapado de bots tratando de vender remedios dudosos.
 
-To solve that without adding a backend, I connected [Giscus](https://giscus.app/). It uses **GitHub Discussions** as the comment storage. Readers who want to comment simply sign in with GitHub, and their comments appear directly at the bottom of the post, styled with custom light and dark CSS to match the rest of the site. There is no tracking, no database to manage, and spam is practically nonexistent.
+Para resolver eso sin sumar un backend, conecté [Giscus](https://giscus.app/). Utiliza las **Discusiones de GitHub** como almacenamiento de comentarios. Los lectores que quieren comentar simplemente inician sesión con GitHub, y sus comentarios aparecen directamente al pie del post, estilizados con CSS personalizado claro y oscuro para integrarse al resto del sitio. No hay rastreo, no hay bases de datos que administrar y el spam es prácticamente inexistente.
 
-## The real danger
+## El verdadero peligro
 
-The real problem with setting up a stack this clean (Astro for static speed, Pages CMS for editing, Giscus for comments, and automated daily builds) is that you completely run out of technical excuses.
+El verdadero problema de armar un stack tan limpio (Astro para velocidad estática, Pages CMS para editar, Giscus para comentarios y compilaciones automáticas diarias) es que te quedás sin excusas técnicas.
 
-There are no more servers to tune, no plugins to update, and no configuration files left to fiddle with. At some point, you have to face the terrifying blank cursor on the screen and actually write something.
+Ya no hay servidores para afinar, ni plugins para actualizar, ni archivos de configuración con los que perder el tiempo. En algún momento, tenés que plantarte frente al cursor titilando en la pantalla en blanco y, efectivamente, escribir algo.

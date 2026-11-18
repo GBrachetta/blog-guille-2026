@@ -1,13 +1,13 @@
 ---
 author: Guillermo Brachetta
 title: "Por qué un clave nunca puede estar afinado (y por qué eso es maravilloso)"
-description: "The mathematical impossibility at the heart of keyboards, and why the unevenness of historical temperaments creates a palette of colors that modern pianos threw away."
+description: "La imposibilidad matemática detrás de los teclados, y cómo la imperfección de los temperamentos históricos crea una paleta de colores que los pianos modernos tiraron a la basura."
 slug: por-que-un-clave-nunca-puede-estar-afinado
 pubDatetime: 2026-11-22T12:00:00+01:00
 featured: false
 draft: false
 tags:
-  - música barroca
+  - música antigua
   - clave
   - afinación
 ogImage: ../../../../assets/images/2026-11/22.png
@@ -15,55 +15,55 @@ ogImage: ../../../../assets/images/2026-11/22.png
 
 ![Image](@/assets/images/2026-11/22.png)
 
-If you ask someone why a harpsichordist spends twenty minutes tuning before a concert, they usually blame the weather.
+Si le preguntás a cualquiera por qué un clavecinista pasa veinte minutos afinando antes de un concierto, lo primero que hacen es echarle la culpa al clima.
 
-It is true that acoustic instruments made of wood and wire are sensitive to the humidity in the room (a harpsichord will cheerfully go out of tune if someone looks at it with bad intentions). But the real issue is not the wood. The real issue is much more embarrassing: **it is mathematically impossible to tune a keyboard in tune.**
+Es verdad que los instrumentos acústicos hechos de madera y alambre son hipersensibles a la humedad del ambiente (un clave se desafina ofendiéndose si alguien lo mira con malas intenciones). Pero el verdadero problema no es la madera. El problema real es mucho más desconcertante: **es matemáticamente imposible afinar un teclado de manera perfecta.**
 
-This is not a defect in the instrument. It is a stubborn mathematical glitch in physics, and musicians spent five centuries arguing over how to live with it.
+Y no se trata de un defecto de fabricación. Es un capricho matemático de la física acústica, y los músicos nos pasamos cinco siglos discutiendo cómo convivir con semejante desastre.
 
-## The mathematics refuse to close
+## Los números se niegan a cerrar
 
-Here is the problem in plain terms.
+Acá está el problema en criollo.
 
-In acoustics, the most harmonious intervals come from very simple fractions. An octave is a clean `2:1` ratio. A pure fifth (like C to G) is `3:2`. A pure major third (like C to E) is `5:4`.
+En acústica, los intervalos más armónicos y placenteros para el oído nacen de fracciones matemáticas muy simples. Una octava es una proporción limpia de `2:1`. Una quinta justa (como de Do a Sol) es `3:2`. Una tercera mayor pura (como de Do a Mi) es `5:4`.
 
-If you sit at a keyboard and tune twelve pure fifths in a row (C to G, G to D, D to A, and so on all the way around the circle until you land on C again), you would naturally expect to reach the exact same note you started on, seven octaves higher.
+Si te sentás al teclado y afinás doce quintas puras consecutivas (de Do a Sol, de Sol a Re, de Re a La, y así dando toda la vuelta al círculo hasta volver a caer en Do), esperarías llegar exactamente a la misma nota con la que empezaste, siete octavas más arriba.
 
-Except you don't. You overshoot it by about a quarter of a semitone (an acoustic mismatch known as the Pythagorean comma). Even worse, if you stack four pure fifths to get up to a major third, the third you get is painfully wide and beats in the air like an agitated hornet.
+Pero no. Te pasás de largo por casi un cuarto de semitono (un desajuste acústico que la física llama _coma pitagórica_). Peor todavía: si apilás cuatro quintas puras para llegar a una tercera mayor, esa tercera que te queda es insoportablemente ancha y zumba en el aire como un avispón furioso.
 
-In other words, nature gave us pure octaves, pure fifths, and pure thirds, and then decreed that they cannot all fit onto the same twelve keys at the same time.
+En otras palabras, la naturaleza nos dio octavas puras, quintas puras y terceras puras, y después decidió que todas juntas no pueden entrar en las mismas doce teclas al mismo tiempo.
 
-## Equal temperament: the grey compromise
+## Temperamento igual: el compromiso burocrático
 
-Since you cannot negotiate with the laws of physics, tuning a keyboard (what we call choosing a _temperament_) is the art of deciding what to do with that leftover acoustic error.
+Como no podés negociar con las leyes de la física, afinar un teclado (lo que llamamos elegir un _temperamento_) es el arte diplomático de decidir qué hacés con ese error acústico que sobra.
 
-On a modern piano, the solution is **equal temperament**. Every single fifth is made slightly too narrow, and every single major third is made noticeably too wide, by the exact same mathematical percentage across all eighty-eight keys.
+En un piano moderno, la solución oficial es el **temperamento igual**. Cada quinta se achica un poco, y cada tercera mayor se ensancha de manera descarada, exactamente en el mismo porcentaje matemático a lo largo de las ochenta y ocho teclas.
 
-It is the ultimate bureaucratic compromise: every key is equally compromised, nobody gets a pure chord, but you can modulate endlessly without hitting an outright disaster. We have been raised on it since childhood, so our ears simply learned to accept that third intervals vibrate with a nervous, permanent buzz.
+Es el colmo del compromiso burocrático: todas las notas quedan igualmente arruinadas, nadie tiene un acorde puro, pero podés modular sin parar de una tonalidad a otra sin provocar una catástrofe inmediata. Como crecimos escuchándolo desde chicos, nuestro oído simplemente se resignó a aceptar que los intervalos de tercera vibren con un zumbido nervioso y permanente.
 
-In the seventeenth and eighteenth centuries, musicians thought this was madness. Why iron out every chord into the same bland grey just so you can play in F-sharp major, a key respectable composers rarely visited anyway?
+En los siglos XVII y XVIII, a los músicos esto les parecía un disparate total. ¿Para qué ibas a planchar todos los acordes en el mismo gris mediocre solo para poder tocar en Fa sostenido mayor, una tonalidad que ningún compositor respetable visitaba jamás?
 
-## Unequal temperaments: an entire palette of colors
+## Temperamentos desiguales: una paleta entera de colores
 
-Instead, Baroque musicians embraced the imperfection. They used unequal temperaments (like meantone, Vallotti, Werckmeister, or Kirnberger) where the errors were deliberately distributed unevenly.
+En cambio, los músicos barrocos abrazaron la imperfección. Usaban temperamentos desiguales (como el mesotónico, Vallotti, Werckmeister o Kirnberger), donde los errores se distribuían a propósito de forma asimétrica.
 
-And that is where the magic happens: **the "out-of-tuneness" is not a flaw; it is the entire emotional palette.**
+Y ahí es donde aparece la magia: **esa falta de afinación estandarizada no es una falla, es toda la paleta expresiva.**
 
-In equal temperament, every key sounds identical in color. A C major chord, an E major chord, and an A-flat major chord all have the exact same mathematical intervals; the pitch is just higher or lower. It is like painting an entire gallery using different shades of the same primer.
+En el temperamento igual, todas las tonalidades tienen exactamente el mismo color. Un acorde de Do mayor, uno de Mi mayor y uno de La bemol mayor tienen las mismas proporciones matemáticas; la única diferencia es si suenan más agudos o más graves. Es como pintar una galería entera usando distintos tonos de la misma pintura base para paredes.
 
-In a historical temperament, each key has a distinct personality, a physical resonance, and an _Affekt_:
+En un temperamento histórico, cada tonalidad tiene su propia personalidad, una resonancia física particular y un _Affekt_ (un afecto emocional):
 
-- **C major and F major** are calm, pure, and luminous. The thirds are almost pure, so the chord rings with a still, glowing clarity that a modern piano can never produce.
-- **G major and D major** have an open, brilliant, festive ring.
-- As you move towards keys with more flats or sharps, like **C minor or F minor**, the intervals become narrower or wider. They begin to beat faster, creating an aching, physical tension in the room.
-- Remote keys like **B major or F-sharp major** become sharp, restless, and dramatic.
+- **Do mayor y Fa mayor** son calmas, puras y luminosas. Las terceras son casi puras, así que el acorde resuena con una quietud y una claridad radiante que un piano moderno jamás va a poder imitar.
+- **Sol mayor y Re mayor** tienen un brillo abierto, festivo y triunfal.
+- A medida que te movés hacia tonalidades con más bemoles o sostenidos, como **Do menor o Fa menor**, los intervalos se vuelven más estrechos o más anchos. Empiezan a batir más rápido, generando una tensión acústica que se siente físicamente en el pecho.
+- Tonalidades remotas como **Si mayor o Fa sostenido mayor** se vuelven afiladas, inquietas y casi desgarradoras.
 
-When Bach, Couperin, or Purcell wrote a piece in F minor, they were not just picking an arbitrary pitch on a staff. They were choosing a specific emotional atmosphere. They knew that the acoustic friction of those intervals would physically grab the listener by the throat.
+Cuando Bach, Couperin o Purcell escribían una obra en Fa menor, no estaban eligiendo una nota cualquiera en el pentagrama. Estaban eligiendo una atmósfera emocional muy precisa. Sabían perfectamente que la fricción acústica de esos intervalos iba a agarrar al oyente del cuello.
 
-## The living sound
+## El sonido vivo
 
-Once you get used to hearing music in historical temperaments, equal temperament starts to sound a bit like walking through an airport: convenient, completely functional, and utterly devoid of local character.
+Cuando te acostumbrás a escuchar música en temperamentos históricos, el temperamento igual empieza a sonar como caminar por un aeropuerto internacional: muy conveniente, perfectamente funcional y completamente desprovisto de carácter local.
 
-So when you see a harpsichordist standing over the soundboard with a tuning hammer, we are not trying to reach some sterile, robotic perfection. We are tuning a personality into the instrument. We are giving the music its shadows, its warmth, and its bite.
+Por eso, cuando ves a un clavecinista inclinado sobre la tabla de resonancia con la llave de afinar en la mano, no estamos buscando una perfección robótica e higiénica. Le estamos afinando una personalidad al instrumento. Le estamos devolviendo a la música sus sombras, su calidez y su mordida.
 
-Perfection would only make it boring.
+La perfección solamente la volvería aburrida.

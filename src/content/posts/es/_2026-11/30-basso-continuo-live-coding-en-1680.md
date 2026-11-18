@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
-title: "Basso continuo: Cuando el compositor sólo escribe la mitad de las notas"
-description: "Why playing figured bass on the harpsichord feels less like reading classical music and more like an emergency negotiation in front of an audience."
+title: "Basso continuo: Cuando el compositor solo escribe la mitad de las notas"
+description: Por qué tocar bajo cifrado en el clave se parece menos a leer música clásica y más a una negociación de emergencia frente al público.
 slug: basso-continuo-live-coding-en-1680
 pubDatetime: 2026-11-30T10:00:00+01:00
 featured: false
@@ -15,61 +15,61 @@ ogImage: ../../../../assets/images/2026-11/30.png
 
 ![Image](@/assets/images/2026-11/30.png)
 
-If you ever glance over a harpsichordist's shoulder during a concert, you might think they brought the wrong score.
+Si alguna vez mirás por encima del hombro de un clavecinista durante un concierto, podrías pensar que se equivocó de partitura.
 
-On the desk is a page of music, but the composer only bothered to write one single line for the left hand. Underneath the notes there are a few tiny, cryptic numbers (a `6`, a `4/2`, a `7`, a lonely sharp), and for the right hand, absolutely nothing. Pure blank paper.
+En el atril hay una hoja de música, pero el compositor se tomó la molestia de escribir una única línea para la mano izquierda. Por debajo de las notas asoman algunos números diminutos y enigmáticos (un `6`, un `4/2`, un `7`, un sostenido solitario), y para la mano derecha, absolutamente nada. Papel en blanco.
 
-This is _basso continuo_ (or figured bass), and for roughly two centuries, it was the foundation of practically all European music. The composer gave you the bass line, told you which intervals belonged above it, and left the rest to your conscience. You had to invent the harmony, the voicing, the rhythm, and the texture live on stage, in front of an audience of four hundred people who came to hear Bach, not your panic.
+Esto es el _basso continuo_ (o bajo cifrado) y, durante unos dos siglos, fue los cimientos de prácticamente toda la música europea. El compositor te daba la línea de bajo, te decía qué intervalos iban por encima y dejaba el resto librado a tu conciencia. Tenías que inventar la armonía, la disposición de las voces, el ritmo y la textura en vivo sobre el escenario, frente a una sala de cuatrocientas personas que fueron a escuchar a Bach, no a presenciar tu ataque de pánico.
 
-## An API from 1680
+## Una API de 1680
 
-Once I started writing code for the web, the parallel struck me immediately: figured bass is essentially an API specification from the seventeenth century.
+Cuando empecé a escribir código para la web, la analogía me cayó como un rayo: el bajo cifrado es, en esencia, la especificación de una API del siglo XVII.
 
-In a modern piano piece, everything is on the page. (Of course, if you _only_ play what is written without phrasing, you sound like a mechanical player piano from 1905, but at least nobody can accuse you of picking the wrong notes.)
+En una pieza para piano del siglo XIX o XX, todo está escrito en la partitura. (Por supuesto, si _únicamente_ tocás lo que está escrito sin frasear, sonás como una pianola mecánica de 1905, pero al menos nadie te puede acusar de haber pifiado las notas).
 
-Figured bass does not tell you what to play. It only defines the contract.
+El bajo cifrado no te dice qué notas tocar. Solo define el contrato.
 
-The bass note provides the foundation, and the little numbers describe the intervals that must sit on top of it. A `6` means you play a sixth above the bass instead of the usual fifth. A sharp means the third is major. If there is no number at all, you play a standard root-position chord and try not to look terrified.
+La nota del bajo provee el cimiento, y los numeritos describen los intervalos que tienen que construirse por encima. Un `6` significa que tocás una sexta sobre el bajo en lugar de la quinta habitual. Un sostenido suelto significa que la tercera es mayor. Si no hay ningún número, tocás un acorde común en estado fundamental y tratás de no poner cara de terror.
 
-How you actually turn that formula into sound depends entirely on the theatre of the moment:
+La manera en que transformás esa fórmula en sonido depende por completo del drama del momento:
 
-- If a soprano is singing a heartbreaking aria about betrayal and poison (which, in baroque opera, is basically the entire plot), you play two quiet notes at a time so you don't ruin her tragic moment.
-- If the entire orchestra enters for a battle scene, you grab ten notes at once, break chords across both keyboards, and try to make a box of plucked wires sound like artillery.
+- Si una soprano está cantando un aria desgarradora sobre traición y veneno (que, en la ópera barroca, es básicamente el argumento entero), tocás dos notas suaves por compás para no arruinarle el momento trágico.
+- Si toda la orquesta entra a pleno para una escena de batalla, manoteás diez notas al mismo tiempo, quebrás acordes alternando ambos teclados y tratás de que una caja con cuerdas de alambre suene como artillería pesada.
 
-You have the rules of the contract, but the implementation is completely yours.
+Tenés las reglas del contrato, pero la implementación corre por tu cuenta.
 
-## Runtime errors on stage
+## Errores de ejecución sobre el escenario
 
-The reason basso continuo is exhilarating (and occasionally terrifying) is that everything happens in real time.
+El motivo por el cual el bajo continuo es fascinante (y, por momentos, aterrador) es que todo pasa en tiempo real.
 
-When I write software, if I make a logic mistake or miscalculate an array, TypeScript complains in my editor before anyone sees it. If something breaks, I fix it quietly in private.
+Cuando escribo software, si cometo un error de lógica o calculo mal un índice, TypeScript chilla en el editor antes de que nadie lo vea. Si algo se rompe, lo arreglo tranquilo y en privado.
 
-On stage, there is no compiler to save you.
+Arriba del escenario, no hay ningún compilador que te salve el pellejo.
 
-If you misread a `6/5` in the middle of a delicate recitative, the clash rings through the entire church hall. The singer's eyebrows shoot into their forehead, the cello player next to you glances sideways with deep concern, and you have to maintain complete composure, nod solemnly, and pretend that painful crunch was an intentional piece of dramatic expression.
+Si leés mal un `6/5` en medio de un recitativo delicado, el choque armónico retumba en toda la nave de la iglesia. A la cantante se le suben las cejas hasta la nuca, el violonchelista de al lado te clava una mirada de profunda preocupación y a vos no te queda otra que mantener una compostura de hierro, asentir con gravedad y poner cara de que semejante discordancia fue una decisión premeditada de altísima carga dramática.
 
-To make things more entertaining, you also have to follow classical voice leading while you invent the chords. You cannot just move your hands in parallel fifths or octaves with the bass; if you do, every conservatory professor who ever lived will roll over in their grave. Your brain is running an invisible checklist while your hands are moving: _Where is the bass going? Which finger is on the leading tone? Did I resolve that seventh, or did I just leave it hanging in mid-air?_
+Para sumar entretenimiento, además tenés que respetar la conducción clásica de voces mientras vas improvisando los acordes. No podés mover las manos en quintas u octavas paralelas con el bajo; si lo hacés, todos los profesores de conservatorio de la historia se van a revolver en sus tumbas. Tu cerebro corre una lista mental invisible mientras tus dedos se mueven: _¿Hacia dónde va el bajo? ¿Con qué dedo estoy tocando la sensible? ¿Resolví esa séptima o la dejé colgada en el aire?_
 
-## Why not just write the notes?
+## ¿Por qué no escribir directamente las notas?
 
-People often ask why composers didn't simply write out the right hand and save everyone the nerves.
+Mucha gente suele preguntar por qué los compositores no se limitaban a escribir la mano derecha y ahorrarles los nervios a todos.
 
-Part of it was practical. When Handel had to finish an entire three-act opera before the theatre season opened, saving half the ink on every page was a matter of survival.
+En parte era una cuestión práctica. Cuando Händel tenía que entregar una ópera entera en tres actos antes de que arrancara la temporada de teatro, ahorrarse la mitad de la tinta en cada página era una cuestión de supervivencia.
 
-But there are far deeper reasons why a Baroque composer would never have wanted a fixed right-hand part:
+Pero hay motivos mucho más profundos por los cuales un compositor barroco jamás hubiera querido fijar la mano derecha en el papel:
 
-### 1. Music as speech, not clockwork
+### 1. La música como discurso, no como relojería
 
-Baroque music is rhetoric. It is designed to persuade, move, and declaim like a classical orator, not tick like a Swiss clock. In a recitative, the singer is essentially speaking heightened poetry. If the composer freezes the right hand into printed quarter notes, the natural rhythm of the language dies immediately. The keyboardist has to listen to the consonants, breathe with the singer, place a chord like a comma in a sentence, and sometimes wait in complete silence while the drama hangs in the room.
+La música barroca es retórica. Está diseñada para persuadir, conmover y declamar como un orador clásico, no para marcar el paso como un reloj suizo. En un recitativo, el cantante está prácticamente declamando poesía elevada. Si el compositor congela la mano derecha en negras impresas, el ritmo natural de la lengua muere en el acto. El tecladista tiene que escuchar las consonantes, respirar con el cantante, colocar un acorde como quien pone una coma en una frase y, a veces, esperar en absoluto silencio mientras la tensión dramática queda flotando en la sala.
 
-### 2. Composition and performance were the same art
+### 2. Composición e interpretación eran el mismo arte
 
-In 1680, the modern division of labour did not exist. There was no concept of a "pure performer" who only reproduces somebody else's finished blueprint. If you sat at a keyboard and could not realize a bass line with elegance, you were not considered an artist, you were just a typist. The composer expected you to be a musical partner, completing the composition with him on that specific afternoon.
+En 1680, la moderna división del trabajo no existía. No existía el concepto del "músico puro" que solo reproduce el plano terminado de otro. Si te sentabas al teclado y no sabías resolver una línea de bajo con soltura y elegancia, no te consideraban un artista: eras apenas un mecanógrafo. El compositor esperaba que fueras un socio musical, completando la obra con él en esa tarde específica.
 
-### 3. The horror of playing the same chord twice
+### 3. El horror de tocar dos veces el mismo acorde
 
-In Baroque form, repetition is everywhere. Arias repeat their first section, dances have second halves, and themes return. Playing the exact same right-hand chords on a repeat would have been an artistic insult to the audience. Leaving the score unwritten allowed the player to start simple, and on the repeat introduce counter-melodies, change registers, arpeggiate in new rhythms, or strip everything back to a whisper.
+En las formas barrocas, la repetición está por todos lados. Las arias repiten su primera sección, las danzas tienen segundas partes y los temas vuelven. Tocar exactamente los mismos acordes en la mano derecha durante una repetición hubiera sido un insulto artístico para el público. Dejar la partitura abierta le permitía al intérprete arrancar simple, y en la repetición meter contramelodías, cambiar de registro, arpegiar con ritmos nuevos o reducir todo a un susurro.
 
-And of course, room acoustics play their part. A dry salon needs more chords to keep the sound alive; a booming cathedral with four seconds of echo demands that you play half as many notes so the music does not turn into soup.
+Y por supuesto, la acústica del lugar juega su papel. Un salón seco necesita más acordes para mantener vivo el sonido; una catedral imponente con cuatro segundos de reverberación te exige tocar la mitad de las notas para que la música no se convierta en una sopa incomprensible.
 
-Three hundred years later, sitting at the harpsichord with nothing but a bass line and some numbers still feels like the ultimate antidote to a rigid world. You are not dusting off a museum artifact; you are keeping a living conversation going.
+Trescientos años después, sentarse al clave con nada más que una línea de bajo y un par de números sigue siendo el mejor antídoto contra un mundo rígido. No estás desempolvando una pieza de museo; estás manteniendo viva una conversación.
