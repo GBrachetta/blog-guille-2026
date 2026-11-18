@@ -52,6 +52,7 @@ const rssTitle = isEs ? `${site.title} (Español)` : site.title;
       sizes="180x180"
       href={getAssetPath("apple-touch-icon.png")}
     />
+    <link rel="manifest" href={getAssetPath("site.webmanifest")} />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Alternate hreflang tags for bilingual SEO -->
@@ -76,6 +77,8 @@ const rssTitle = isEs ? `${site.title} (Español)` : site.title;
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.title} />
+    <meta property="og:locale" content={isEs ? "es_AR" : "en_US"} />
+    <meta property="og:locale:alternate" content={isEs ? "en_US" : "es_AR"} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
