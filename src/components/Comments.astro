@@ -1,5 +1,6 @@
 ---
 import config from "@/config";
+import { postSlugsEsToEn } from "@/utils/getAlternateUrls";
 
 type Props = {
   title?: string;
@@ -8,26 +9,6 @@ type Props = {
 const { title } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 const commentsTitle = locale === "es" ? "Comentarios" : "Comments";
-
-// Bidirectional slug mapping to share a single comment thread across English and Spanish
-const postSlugsEsToEn: Record<string, string> = {
-  "el-juego-de-dados-de-mozart": "mozarts-dice-game",
-  "como-le-ensene-a-mi-cama-a-cegarme-a-las-3-am":
-    "six-hours-to-save-three-seconds",
-  "mi-setup-de-home-assistant-parte-1": "my-home-assistant-setup-part-1",
-  "por-que-los-sitios-web-de-musicos-siguen-pareciendo-de-2004":
-    "building-websites-for-musicians",
-  "por-que-un-clave-nunca-puede-estar-afinado":
-    "why-a-harpsichord-is-never-in-tune",
-  "mi-setup-de-home-assistant-parte-2": "my-home-assistant-setup-part-2",
-  "el-protocolo-de-buenas-noches": "the-good-night-protocol",
-  "automatizaciones-que-cuidan-a-otras-automatizaciones":
-    "automations-that-babysit-other-automations",
-  "tratados-historicos-musicos-discutiendo-por-escrito":
-    "historical-treatises-musicians-arguing-in-print",
-  "basso-continuo-live-coding-en-1680": "basso-continuo-live-coding-in-1680",
-  "por-que-construi-este-blog-con-astro": "why-i-built-this-blog-with-astro",
-};
 
 // Calculate canonical English path for comments so both locales share the same thread
 const currentPath = Astro.url.pathname;

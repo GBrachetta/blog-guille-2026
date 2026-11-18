@@ -1,6 +1,7 @@
 ---
 import config from "@/config";
 import LinkButton from "./LinkButton.astro";
+import { getAlternateUrls } from "@/utils/getAlternateUrls";
 
 const { site, socials } = config;
 
@@ -25,104 +26,8 @@ const locale = Astro.currentLocale ?? "en";
 const targetLocale = locale === "en" ? "es" : "en";
 const label = targetLocale === "es" ? "Español" : "English";
 
-const postSlugsEnToEs: Record<string, string> = {
-  "mozarts-dice-game": "el-juego-de-dados-de-mozart",
-  "six-hours-to-save-three-seconds":
-    "como-le-ensene-a-mi-cama-a-cegarme-a-las-3-am",
-  "my-home-assistant-setup-part-1": "mi-setup-de-home-assistant-parte-1",
-  "building-websites-for-musicians":
-    "por-que-los-sitios-web-de-musicos-siguen-pareciendo-de-2004",
-  "why-a-harpsichord-is-never-in-tune":
-    "por-que-un-clave-nunca-puede-estar-afinado",
-  "my-home-assistant-setup-part-2": "mi-setup-de-home-assistant-parte-2",
-  "the-good-night-protocol": "el-protocolo-de-buenas-noches",
-  "automations-that-babysit-other-automations":
-    "automatizaciones-que-cuidan-a-otras-automatizaciones",
-  "historical-treatises-musicians-arguing-in-print":
-    "tratados-historicos-musicos-discutiendo-por-escrito",
-  "basso-continuo-live-coding-in-1680": "basso-continuo-live-coding-en-1680",
-  "why-i-built-this-blog-with-astro": "por-que-construi-este-blog-con-astro",
-};
-
-const postSlugsEsToEn: Record<string, string> = Object.fromEntries(
-  Object.entries(postSlugsEnToEs).map(([en, es]) => [es, en])
-);
-
-const tagSlugsEnToEs: Record<string, string> = {
-  devices: "dispositivos",
-  "early-music": "musica-barroca",
-  "smart-home": "domotica",
-  tuning: "afinacion",
-  "web-development": "desarrollo-web",
-  harpsichord: "clave",
-  automations: "automatizaciones",
-  sensors: "sensores",
-  history: "historia",
-  musicology: "musicologia",
-};
-
-const tagSlugsEsToEn: Record<string, string> = Object.fromEntries(
-  Object.entries(tagSlugsEnToEs).map(([en, es]) => [es, en])
-);
-
-const pathname = Astro.url.pathname.replace(/\/+$/, "");
-let switchUrl = targetLocale === "es" ? "/es/" : "/";
-
-if (locale === "en") {
-  if (pathname === "" || pathname === "/") {
-    switchUrl = "/es/";
-  } else if (pathname === "/about") {
-    switchUrl = "/es/about/";
-  } else if (pathname === "/privacy") {
-    switchUrl = "/es/privacy/";
-  } else if (pathname === "/archives") {
-    switchUrl = "/es/archives/";
-  } else if (pathname === "/search") {
-    switchUrl = "/es/search/";
-  } else if (pathname === "/posts") {
-    switchUrl = "/es/posts/";
-  } else if (pathname.startsWith("/posts/")) {
-    const postSlug = pathname.replace(/^\/posts\//, "");
-    const mapped = postSlugsEnToEs[postSlug];
-    switchUrl = mapped ? `/es/posts/${mapped}/` : "/es/posts/";
-  } else if (pathname === "/tags") {
-    switchUrl = "/es/tags/";
-  } else if (pathname.startsWith("/tags/")) {
-    const tagSlug = pathname.replace(/^\/tags\//, "");
-    const mapped = tagSlugsEnToEs[tagSlug] ?? tagSlug;
-    switchUrl = `/es/tags/${mapped}/`;
-  } else {
-    switchUrl = "/es/";
-  }
-} else {
-  // Current locale is Spanish
-  const stripped = pathname.replace(/^\/es/, "");
-  if (stripped === "" || stripped === "/") {
-    switchUrl = "/";
-  } else if (stripped === "/about") {
-    switchUrl = "/about/";
-  } else if (stripped === "/privacy") {
-    switchUrl = "/privacy/";
-  } else if (stripped === "/archives") {
-    switchUrl = "/archives/";
-  } else if (stripped === "/search") {
-    switchUrl = "/search/";
-  } else if (stripped === "/posts") {
-    switchUrl = "/posts/";
-  } else if (stripped.startsWith("/posts/")) {
-    const postSlug = stripped.replace(/^\/posts\//, "");
-    const mapped = postSlugsEsToEn[postSlug];
-    switchUrl = mapped ? `/posts/${mapped}/` : "/posts/";
-  } else if (stripped === "/tags") {
-    switchUrl = "/tags/";
-  } else if (stripped.startsWith("/tags/")) {
-    const tagSlug = stripped.replace(/^\/tags\//, "");
-    const mapped = tagSlugsEsToEn[tagSlug] ?? tagSlug;
-    switchUrl = `/tags/${mapped}/`;
-  } else {
-    switchUrl = "/";
-  }
-}
+const alternateUrls = getAlternateUrls(Astro.url.pathname);
+const switchUrl = targetLocale === "es" ? alternateUrls.es : alternateUrls.en;
 ---
 
 <div class="flex flex-wrap items-center gap-1">
