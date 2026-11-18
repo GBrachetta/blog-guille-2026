@@ -7,7 +7,7 @@ pubDatetime: 2026-11-22T12:00:00+01:00
 featured: false
 draft: false
 tags:
-  - música antigua
+  - música barroca
   - clave
   - afinación
 ogImage: ../../../../assets/images/2026-11/22.png
