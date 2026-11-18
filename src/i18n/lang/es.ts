@@ -22,6 +22,7 @@ export default {
     editPage: "Editar página",
     previousPost: "Artículo anterior",
     nextPost: "Siguiente artículo",
+    readingTime: "{{minutes}} min de lectura",
   },
   pagination: {
     prev: "Anterior",

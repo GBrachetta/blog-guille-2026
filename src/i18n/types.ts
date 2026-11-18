@@ -21,6 +21,7 @@ export interface UIStrings {
     editPage: string;
     previousPost: string;
     nextPost: string;
+    readingTime?: string;
   };
   pagination: {
     prev: string;

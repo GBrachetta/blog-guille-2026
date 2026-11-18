@@ -3,8 +3,9 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import IconCalendar from "@/assets/icons/IconCalendar.svg";
+import IconClock from "@/assets/icons/IconClock.svg";
 import config from "@/config";
-import { useTranslations } from "@/i18n";
+import { tplStr, useTranslations } from "@/i18n";
 import { resolveTimezone } from "@/utils/resolveTimezone";
 
 dayjs.extend(utc);
@@ -16,6 +17,7 @@ type Props = {
   pubDatetime: string | Date;
   timezone?: string;
   modDatetime?: string | Date | null;
+  readingTime?: number | string;
 };
 
 const {
@@ -24,6 +26,7 @@ const {
   size = "sm",
   class: className = "",
   timezone: postTimezone,
+  readingTime,
 } = Astro.props;
 
 const t = useTranslations(Astro.currentLocale);
@@ -38,25 +41,58 @@ const date = datetime.format("D MMM, YYYY");
 ---
 
 <div
-  class:list={["text-muted-foreground flex items-center gap-x-2", className]}
+  class:list={[
+    "text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1",
+    className,
+  ]}
 >
-  <IconCalendar
-    class:list={[
-      "inline-block size-6 min-w-5.5",
-      { "scale-90": size === "sm" },
-    ]}
-  />
+  <div class="flex items-center gap-x-2">
+    <IconCalendar
+      class:list={[
+        "inline-block size-6 min-w-5.5",
+        { "scale-90": size === "sm" },
+      ]}
+    />
+    {
+      isModified && (
+        <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
+          {t.post.updatedAt}:
+        </span>
+      )
+    }
+    <time
+      class:list={["text-sm", { "sm:text-base": size === "lg" }]}
+      datetime={datetime.toISOString()}
+    >
+      {date}
+    </time>
+  </div>
   {
-    isModified && (
-      <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
-        {t.post.updatedAt}:
-      </span>
+    readingTime && (
+      <>
+        <span
+          aria-hidden="true"
+          class:list={[
+            "text-muted-foreground/60 select-none",
+            { "text-sm": size === "sm", "text-base": size === "lg" },
+          ]}
+        >
+          ·
+        </span>
+        <div class="flex items-center gap-x-1.5">
+          <IconClock
+            class:list={[
+              "inline-block size-6 min-w-5.5",
+              { "scale-90": size === "sm" },
+            ]}
+          />
+          <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
+            {typeof readingTime === "number"
+              ? tplStr(t.post.readingTime, { minutes: readingTime })
+              : readingTime}
+          </span>
+        </div>
+      </>
     )
   }
-  <time
-    class:list={["text-sm", { "sm:text-base": size === "lg" }]}
-    datetime={datetime.toISOString()}
-  >
-    {date}
-  </time>
 </div>

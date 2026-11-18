@@ -17,6 +17,7 @@ import Comments from "@/components/Comments.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import PostToc from "./_components/PostToc.astro";
 import config from "@/config";
+import { getReadingTime } from "@/utils/getReadingTime";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -78,6 +79,7 @@ const {
 
 const { Content, headings } = await render(post);
 const tocHeadings = config.features.toc && !hideToc ? headings : [];
+const readingTime = getReadingTime(post.body);
 
 let ogImageUrl: string | undefined;
 
@@ -126,7 +128,13 @@ const ogImage = ogImageUrl
     </h1>
 
     <div class="my-2 flex items-center gap-2">
-      <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <Datetime
+        {pubDatetime}
+        {modDatetime}
+        {timezone}
+        {readingTime}
+        size="lg"
+      />
       <span
         aria-hidden="true"
         class:list={[
