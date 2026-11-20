@@ -1,7 +1,7 @@
 ---
 author: Guillermo Brachetta
 title: "My Home Assistant Setup (Part 1): The Infrastructure of Total Spoiledness"
-description: From a humble 2 GB virtual machine on a Synology NAS to 128 GB of local storage, built-in Zigbee plugs everywhere, and the absolute refusal to touch a physical light switch.
+description: From a 2 GB VM on a Synology NAS to 128 GB of local storage, flush Zigbee outlets everywhere, and refusing to touch a wall switch.
 slug: my-home-assistant-setup-part-1
 pubDatetime: 2026-11-18T10:00:00+01:00
 featured: false
@@ -16,56 +16,54 @@ ogImage: ../../../../assets/images/2026-11/18.png
 
 ![Image](@/assets/images/2026-11/18.png)
 
-If you want to know the exact moment my dignity as a functioning adult collapsed, I can give you the date.
+If you want the exact moment my dignity as a functioning adult collapsed, I can give you the date.
 
-It was a Tuesday evening in November. I walked through the front door with four heavy bags of groceries, kicked the door shut with my heel, and watched the kitchen lights turn on at exactly forty percent warmth. No switches. No hands. No shouting at a stupid plastic gadget on the counter.
+It was a Tuesday evening in November. I walked into the house with four heavy bags of groceries, kicked the door shut with my heel, and watched the kitchen lights come up at 40% warmth. No switches. No hands. No barking orders at a plastic puck on the counter.
 
-I just stood in the hallway, dropped the bags, and realized: I am ruined. I have become completely spoiled. I haven't physically pressed a wall switch in six months, and if someone asks me to do it now, it feels like an unreasonable personal insult.
+I stood there in the hallway with my arms full and realized I was ruined. Six months without pressing a wall switch does strange things to a person—if someone asks me to flick one now, I take it as a minor personal insult.
 
-And don't get me started on voice assistants. Shouting _"Hey Siri, dim the reading lamp to seventy percent"_ while your partner is trying to concentrate in the same room is not living in the twenty-first century. It is just screaming at a deaf cylinder like a madman in your own living room. If I have to negotiate with an appliance out loud, the technology has already failed me. Real luxury is dead silence. The house should simply observe, calculate, and get out of your way.
+Voice assistants are just as bad. Shouting _"Hey Siri, dim the reading lamp to 70%"_ while your partner is trying to concentrate in the same room isn't futuristic. It's yelling at a deaf cylinder like a lunatic in your own living room. If I have to negotiate with an appliance out loud, the system has already lost. Good automation is quiet. The house should notice what's happening, do the math, and stay out of the way.
 
-To pull that off without setting the curtains on fire, though, you need serious computing power. Which is how my utility cupboard slowly turned into an IT department.
+Pulling that off without catching the curtains on fire takes real hardware underneath. That's how my utility cupboard slowly turned into a small server room.
 
 ## The Synology Escalation
 
-Normal people buy a Raspberry Pi, stick an SD card into it, wrap it in electrical tape, and pray. I play the harpsichord and I work with software; I have seen enough hard drives and wooden instruments collapse under humidity to know that fragile hardware always dies at 9 PM on a Sunday when you need it most.
+Normal people buy a Raspberry Pi, push an SD card into the slot, wrap it in electrical tape, and hope for the best. I play the harpsichord and I write software; I've seen enough hard drives and wooden soundboards warp under bad humidity to know fragile hardware always dies at 9 PM on a Sunday when you need it most.
 
-So Home Assistant runs in a Virtual Machine on my Synology NAS.
+So Home Assistant runs in a virtual machine on my Synology NAS.
 
-It started innocently enough. I gave the virtual machine two gigabytes of RAM and thirty-two gigabytes of disk. I told myself it was just for a few bulbs and the heating. Then I discovered custom integrations. Then I added Zigbee. Two gigabytes became four gigabytes because the database started sweating. Four became six because I refuse to let my house buffer.
+It started modestly: 2 GB of RAM and a 32 GB disk. Just a few lights and the heating, I told myself. Then I started adding custom integrations. Then Zigbee. RAM went from 2 GB to 4 GB when the recorder database began choking, then up to 6 GB because I refuse to wait for a dashboard to catch up.
 
-And the virtual disk? Thirty-two gigabytes doubled to sixty-four, and sixty-four became one hundred and twenty-eight gigabytes. I actually said out loud to Nina: "One hundred and twenty-eight gigabytes on a Synology array should be enough for a lifetime."
+The disk followed the same curve: 32 GB to 64 GB, then 128 GB. I actually told Nina, _"128 GB on a Synology array should last a lifetime."_
 
-Never say that. The universe hears you every time. But right now, that virtual machine is a tank. It handles hundreds of entities, local Zigbee coordinators, and network protocols, and not a single byte leaves the house to consult a cloud server in California.
+Never say that out loud. The universe listens every time. Still, the VM holds up like a tank—hundreds of entities, local Zigbee coordinators, local protocols, and nothing phoning home to a server in California.
 
 ## Built-In Plugs and the Surgery of Outlets
 
-Once the server is running like an industrial plant, external smart plugs become offensive.
+Once the server is humming like an industrial plant, clip-on smart plugs start looking offensive.
 
-You buy a standard smart plug, stick it into the wall, and suddenly you have a white plastic tumor sticking ten centimeters into the room. It blocks the plug next to it, collects dust, and looks like an illegal wiretap on your baseboard.
+Plug one in and suddenly a chunky white brick sticks ten centimeters out of the wall, blocking the socket beside it, catching dust, and looking like a wiretap bolted to the baseboard.
 
-So I spent several weekends with a multimeter, insulated screwdrivers, and a headlamp replacing the sockets in the walls. Every single outlet is now a flush-mounted Zigbee socket that sits flat against the plaster. Even better, they have two USB ports built right into the faceplate, which means no more hunting for chargers behind the nightstand. They report real-time wattage, voltage, and state directly to the NAS, and visitors have no idea they are looking at a radio node.
+So I spent a few weekends with a multimeter, insulated screwdrivers, and a headlamp swapping the sockets in the walls. Every outlet is now a flush-mounted Zigbee socket sitting flat against the plaster, complete with two built-in USB ports on the faceplate so I'm never digging around behind the nightstand for a charger. Each one reports live wattage, voltage, and state straight to the NAS, while guests just see a normal wall outlet.
 
 ## The Gentle Awakening: Shuffled Baroque and Boiling Water
 
-Which brings me to the morning, where this machine actually saves my life.
+Mornings are where this setup earns its keep.
 
-I have zero patience for harsh alarms or blinding kitchen lights. Our morning routine starts with an Apple Music playlist called "Good morning", which syncs through Music Assistant right inside Home Assistant. It fades in through the speakers so quietly you barely notice it, and the automation makes sure it shuffles every single day. One morning you wake up to a Graupner cantata, the next it is Mozart, the next it is Rameau. Never the same sequence, never predictable.
+Harsh alarms and blinding overhead lights put me in a bad mood before my feet hit the floor. Our mornings begin with an Apple Music playlist called _"Good morning"_, played through Music Assistant in Home Assistant. It fades in quietly through the speakers and shuffles daily—a Graupner cantata one morning, Mozart the next, Rameau after that. Nothing repeats in the same order.
 
-At the exact same time, the lighting behaves like a polite butler. It does not turn on every bulb in the kitchen and dining room to blind you. It turns on just the dining table light and the sink lights, and pins them strictly to ten percent brightness. Just enough light so you don't step on anything, without burning your retinas.
+The lights follow suit without trying to blind us. Instead of lighting up the whole kitchen and dining room, only the dining table light and sink lights come on, capped at 10% brightness—enough to walk safely without searing your retinas.
 
-And the kettle? I don't touch the phone. The morning automation turns on the kettle by itself. By the time I drag myself out from under the duvet and walk into the kitchen, the water is already boiling. Some people call that excessive. I call it basic self-defense against the morning.
+Even the kettle runs on autopilot. The morning routine switches it on before I get out of bed, so by the time I shuffle into the kitchen, the water is already boiling. Call it excessive if you want; I call it basic self-defense before coffee.
 
 ## The Preheated Oven Highway Protocol
 
-Then there is the oven.
+My Wi-Fi oven gets the most eye-rolls. _"Why does an oven need Wi-Fi, Guille? Does the bread rise better with an IP address?"_
 
-Whenever people hear that my oven is on Wi-Fi, they roll their eyes. "Why does an oven need the internet, Guille? Does the bread rise better if it has an IP address?"
+Try rehearsing in Amsterdam all afternoon and then driving back in the dark and rain. Forty minutes out on a freezing Tuesday, the last thing you want is to walk in, turn on a cold oven, and wait half an hour for steel and cast iron to reach 200 °C before you can even start dinner.
 
-Here is why: I spend entire afternoons rehearsing in Amsterdam, followed by a long, exhausting drive back on the highway in the dark and the rain. When you are forty minutes from home on a freezing Tuesday, the last thing you want is to arrive, turn on a cold oven, and wait half an hour for cast iron and steel to reach two hundred degrees Celsius before you can even begin.
+I don't touch my phone on the drive. Home Assistant watches my commute telemetry, and when it estimates I'm an hour from home, it preheats the oven on its own. If I left a casserole or bread dough ready in the cold oven earlier that day, dinner is practically waiting when we arrive—and our Nuki smart lock senses we're approaching and unlatches the door before we're digging for keys in the rain. Walk inside, hang up your coat, smell something hot finishing up, and pour tea without touching a switch or key all day.
 
-I don't even touch an app while driving. With Home Assistant tracking my commute telemetry, the moment it calculates that I am exactly one hour away from home, it fires up the oven completely on its own. If I had the foresight in the morning to leave a roast or a casserole seasoned and waiting inside the cold oven, I don't even wait for dinner to cook. We don't even have to fish for keys in the rain, because our Nuki smart lock detects our approach and unlatches the front door for us. You simply walk straight inside, take off your coat, and the house welcomes you with the aroma of a slow-roasted meal that finished cooking twenty minutes ago.
+People can mock over-engineered homes all they like. Coming home on a miserable Dutch night to hot food and a warm house doesn't make you feel like a nerd—it makes you feel like a king who accidentally learned YAML.
 
-You can laugh at home automation all you want, but when you walk through the door on a rainy Dutch winter night to hot food and tea without having touched a single key or switch all day, you don't feel like a nerd. You feel like a king who accidentally learned how to configure YAML.
-
-Of course, keeping the lights automated and the roast on schedule is only the comfortable part. In Part 2, things get slightly out of hand: sensors in every room imaginable, using power draw curves on the washing machine to stop clean laundry from rotting, and tracking Nina's commute via Waze so the HomePod announces her arrival down to the minute.
+Keeping the lights quiet and dinner timed is the easy part. In Part 2, things escalate: sensors in every corner, power-draw curves on the washing machine so damp laundry doesn't sour, and Waze commute tracking so the HomePod calls out Nina's arrival down to the minute.

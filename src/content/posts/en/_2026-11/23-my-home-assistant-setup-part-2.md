@@ -16,58 +16,56 @@ ogImage: ../../../../assets/images/2026-11/23.png
 
 ![Image](@/assets/images/2026-11/23.png)
 
-In [Part 1](/posts/my-home-assistant-setup-part-1/), I confessed how my adult dignity dissolved into total spoiledness: running a Synology virtual machine with six gigabytes of RAM, installing flush Zigbee sockets everywhere, and refusing to touch a wall switch or yell at voice assistants.
+In [Part 1](/posts/my-home-assistant-setup-part-1/), I confessed how my adult dignity dissolved into total spoiledness: running a Synology virtual machine with 6 GB of RAM, putting flush Zigbee outlets everywhere, and refusing to touch a wall switch or yell at voice assistants.
 
-Having a powerful server in the utility cupboard, however, is completely pointless if your house is fundamentally blind. You can write all the elegant automations you want, but if the system has no idea where you are, what you are doing, or how much light is coming through the windows, it is just a very expensive clock with delusions of grandeur.
+A heavy server in the utility cupboard doesn't get you far if your house is basically blind. You can write neat automations all day, yet if the system can't tell where anyone is, what people are doing, or how much daylight is coming through the glass, it's just an expensive clock with big ideas.
 
-Which brings us to the next stage of the obsession: turning every room into an observational laboratory.
+So the obsession moved to the next layer: turning every room into a quiet little observation post.
 
 ## The Flapping Arm Ritual
 
-If you look closely at the corners, doorframes, and bookshelves in our house, you will find tiny, battery-powered multi-sensors everywhere. They track temperature, humidity, and ambient illuminance in lux. On the external doors and windows, magnetic contact sensors keep quiet inventory.
+Look closely at the corners, doorframes, and shelves around the house and you'll spot small battery-powered multi-sensors tracking temperature, humidity, and light in lux, alongside magnetic contact sensors keeping quiet tabs on exterior doors and windows.
 
 The real game changer, however, was throwing away conventional motion sensors.
 
-Anyone who has ever lived with basic passive infrared (PIR) detectors knows the special humiliation of the freeze. You sit down on the sofa with a book or a musical score. You stay completely still for three minutes, completely absorbed in what you are doing. Suddenly, the room plunges into pitch black darkness.
+Anyone who has lived with basic PIR detectors knows the freeze trap. You sit down on the sofa with a book, stay still for a few minutes while concentrating, and suddenly the room drops into pitch darkness.
 
-At that point, you have two choices: get up from your comfortable chair, or perform an undignified, frantic arm dance in the dark like a drowning sailor trying to flag down a helicopter, just to convince a five-euro plastic sensor that your heart hasn't stopped beating.
+From there you have two options: stand up from a comfortable seat, or do a frantic, undignified arm-wave in the dark like someone flagging down a rescue helicopter, just to prove to a five-euro plastic box that you're still breathing.
 
-I reached my limit with that nonsense. Today, the house runs on micro-radar (mmWave) presence sensors. Unlike old infrared sensors that only detect a moving heat signature, micro-radar detects the microscopic movement of your chest expanding and contracting as you breathe. You can sit perfectly still on the sofa for three hours reading, and the lights will not flicker once.
+I was done with that routine. Now the rooms rely on mmWave presence sensors. Instead of waiting for a moving heat blob, millimeter-wave radar picks up tiny chest movements as you breathe. You can sit still reading on the couch for hours and the lights won't blink out once.
 
-Even better, they work alongside ambient light thresholds. If the afternoon sun is blazing through the front windows, the house knows that turning on ceiling spotlights would be pure stupidity, no matter how many times you walk back and forth. The house does not guess. It looks, it calculates, and it stays out of the way.
+Paired with lux thresholds, the house also skips turning on ceiling spots when afternoon sun is already pouring through the windows, no matter how much you pace back and forth. No guessing, just reading the room and staying out of the way.
 
 ## Saving the Laundry from Certain Death
 
-Beyond lighting, the real triumph of home automation is solving ancient domestic catastrophes that have plagued relationships since the invention of running water.
+Beyond lighting, half the value of home automation is fixing small household traps that wear down everyone's patience.
 
-Take the washing machine.
+Take laundry.
 
-Every household on earth knows the tragedy. You put a load of towels or bedsheets into the drum, start the cycle, and walk away feeling virtuous. You get caught up in your day, sit down at the harpsichord, or start writing code. Four hours later, a wave of cold dread hits you: the laundry.
+Everyone knows the cycle: you load towels or sheets, hit start feeling organized, get pulled into practicing or writing code, and four hours later remember the drum.
 
-You run to the utility room, open the door, and are greeted by that unmistakable, sour smell of wet fabric that has been stewing in a closed steel drum. The cycle is ruined. The day is ruined. Now you have to wash everything all over again while questioning your fitness as a functional adult.
+You open the utility room door and get hit by that unmistakable sour smell of damp fabric sitting in a closed metal tub. Now you get to wash the whole load again and question your grip on basic adulting.
 
-In our house, both the washing machine and the dryer are connected appliances integrated straight into Home Assistant. This is not about having an appliance that looks futuristic on a showroom floor; it is about total operational awareness.
+Both our washer and dryer feed straight into Home Assistant. This isn't about showroom gimmicks—it's about knowing what's actually happening in the utility room.
 
-I can programme cycles remotely, adjust settings, and monitor real-time telemetry on exactly what stage the drum is in. The machines even keep track of consumables, reporting directly to Home Assistant when the liquid detergent or soap reservoir is running low, so you never accidentally launch an hour-long cycle with half a teaspoon of soap.
+I can start or adjust cycles remotely, watch which phase the machine is in, and get a heads-up when detergent or soap is running low so nobody launches a full cycle with half a spoonful left.
 
-And the second the cycle finishes, there is no relying on weak electronic beeps muffled behind a closed utility room door. Home Assistant registers the completion, pings our phones, and the HomePod softly announces across the house that the laundry is waiting. No forgotten wet heaps, no sour towels, and no domestic laundry amnesia.
+When a cycle finishes, we aren't counting on quiet beeps behind a closed door. Home Assistant logs the finish, sends a push notification, and has the HomePod announce across the house that the laundry is done. Fewer forgotten damp piles, fewer sour towels.
 
 ## The Nina Arrival Protocol
 
-The undisputed crown jewel of our entire setup, however, is how Home Assistant handles the evening commute.
+The centerpiece of the whole setup, though, is how we handle the evening drive home.
 
-In any partnership, the daily question of _"Where are you?"_ is a constant source of low-level stress. One person is driving across traffic-choked highways in the rain, the other is at home trying to time dinner, and neither of them should be sending text messages while merging onto a Dutch ring road in the dark.
+In any relationship, _"Where are you?"_ gets old fast. One person is navigating wet highway traffic in the dark, the other is trying to time dinner at home, and nobody wants someone texting while merging onto a Dutch ring road.
 
-Instead, we let the telemetry do the work.
+Telemetry handles it instead: once Nina leaves the office and crosses a geofence, Home Assistant kicks off a script that checks live Waze traffic.
 
-When Nina leaves her office, her phone crosses a geofence. Home Assistant doesn't just register that she departed; it immediately fires a script that queries the live Waze traffic API.
+Straight-line distance means nothing when you're dealing with canals, bottlenecks, and bridge openings. It looks at real highway conditions and estimates when she'll actually pull up—down to the minute.
 
-It doesn't calculate straight-line distance, which is useless in a country full of canals and sudden bridge openings. It analyzes real-time highway congestion, detects backups, and calculates her arrival down to the minute.
-
-Back in our living room, the HomePod chimes softly and speaks in a calm, civilized tone:
+In the living room, the HomePod chimes gently and says:
 
 _"Nina has left work. She will be home at 18:42, in thirty-four minutes."_
 
-I don't have to call. She doesn't have to touch her phone. I know exactly when to boil the water for pasta or slide a tray into the preheated oven. And by the time her car turns into the street, the Nuki lock is already unlocking the door, and dinner is ten minutes from the table.
+No phone calls needed, no texting on the road. I know when to put water on to boil or slide a dish into the oven, and by the time she turns onto the street, the Nuki smartlock is already unlocking the door and dinner is nearly ready.
 
-Some people look at this level of automation and see unnecessary technical indulgence. I see it as counterpoint: multiple independent voices moving at the same time, each following strict internal logic, creating perfect harmony without ever stepping on each other's toes.
+Some people see this as way too much engineering for a house. To me it feels like counterpoint: separate lines moving together by their own logic, keeping harmony without tripping over each other.
